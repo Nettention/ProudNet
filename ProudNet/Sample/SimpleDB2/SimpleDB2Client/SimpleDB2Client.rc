@@ -1,0 +1,324 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\SimpleDB2Client.rc2""  // Microsoft Visual C++ AI¿UAC ´U¸￥ μμ±¸¿¡¼­ ÆiAyCN ¸®¼O½ºAO´I´U.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // C￥AØ ±¸¼º ¿a¼OAO´I´U.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SimpleDB2Client.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SimpleDB2Client Infomation"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "SimpleDB2Client, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_SIMPLEDB2CLIENT_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SimpleDB2Client"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "실행",IDOK,263,160,50,33
+    PUSHBUTTON      "닫기",IDCANCEL,263,7,50,14
+    LTEXT           "Static",IDC_COMMENT,7,160,244,33,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT1,7,7,243,146,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+IDD_SELECT_DLG DIALOGEX 0, 0, 125, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Cache Server",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,16,13,59,10
+    CONTROL         "Non Cache Server",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,16,26,74,10
+    DEFPUSHBUTTON   "확인",IDOK,68,45,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SimpleDB2Client.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "SimpleDB2Client.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_SIMPLEDB2CLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_SELECT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "SimpleDB2Client 정보(&A)..."
+    IDS_STRING102           "DB cache2 클라의 서버 연결 시도 실패"
+    IDS_STRING103           "Client : Dbms에 Write를 성공했습니다. HostID : %d 타입 : %s, Guid : %s "
+    IDS_STRING104           "독점 데이터 로딩 실패! 이유: "
+    IDS_STRING105           "Guid가 잘못되었 습니다."
+    IDS_STRING106           "로딩 요청 결과 대기 성공"
+    IDS_STRING107           "대기표가 같지 않습니다. 설정이 잘못되었거나 서버 오류입니다."
+    IDS_STRING108           "OnAddData 실패. 이유:%s 코멘트:%s"
+    IDS_STRING109           "비독점 로드 스냅샷 실패. 이유:  "
+    IDS_STRING110           "비독점 로드 스냅샷 성공!"
+    IDS_STRING111           "Root 정보를 Add&로딩 요청"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "호출"
+    IDS_STRING113           "실패"
+    IDS_STRING114           "전송 실패"
+    IDS_STRING115           "UUID 정보가 잘못되었습니다."
+    IDS_STRING116           "성공"
+    IDS_STRING117           "DbCacheServer 접속 성공."
+    IDS_STRING118           "DbCacheServer 접속 실패."
+    IDS_STRING119           "아직 request에 대한 응답이 도착하지 않았습니다."
+    IDS_STRING120           "이유"
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SIMPLEDB2CLIENT_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SimpleDB2Client"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Run",IDOK,263,160,50,33
+    PUSHBUTTON      "Close",IDCANCEL,263,7,50,14
+    LTEXT           "Static",IDC_COMMENT,7,160,244,33,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT1,7,7,243,146,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SIMPLEDB2CLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "SimpleDB2Client information(&A)..."
+    IDS_STRING102           "Failed connecting of DB cache2 client to server"
+    IDS_STRING103           "Succeed to write clinet : Dbms - HostID : %d Type : %s Guid : %s"
+    IDS_STRING104           "Failed exclusive data loading! Reason : "
+    IDS_STRING105           "Wrong Guid"
+    IDS_STRING106           "Succeed to que loading request result"
+    IDS_STRING107           "Wrong que. Wrong setting or server error"
+    IDS_STRING108           "Failed OnAddData Reason : %s Comment : %s"
+    IDS_STRING109           "Failed to take non-exclusive load snapshot  Reason-"
+    IDS_STRING110           "Succeed to take non-exclusive load snapshot!"
+    IDS_STRING111           "Request add&load root information to DBServer"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "call"
+    IDS_STRING113           "failed"
+    IDS_STRING114           "is failed to send!"
+    IDS_STRING115           "UUID information is wrong."
+    IDS_STRING116           "succeed"
+    IDS_STRING117           "Succeed to connect DbCacheServer."
+    IDS_STRING118           "Failed to connect DbCacheServer."
+    IDS_STRING119           "Response has not arrived yet"
+    IDS_STRING120           "Reason"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\SimpleDB2Client.rc2"  // Microsoft Visual C++ AI¿UAC ´U¸￥ μμ±¸¿¡¼­ ÆiAyCN ¸®¼O½ºAO´I´U.
+#include "l.KOR\afxres.rc"      // C￥AØ ±¸¼º ¿a¼OAO´I´U.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

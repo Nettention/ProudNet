@@ -1,0 +1,309 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\GCClient.rc2""  // Microsoft Visual C++에서 편집되지 않은 리소스\r\n"
+    "#include ""afxres.rc""         // 표준 구성 요소\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GCClient.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GCClient Information"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GCClient Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_GCCLIENT_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ProudNet Casual Game Client Sample"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,263,25,50,16
+    CTEXT           "TODO: 여기에 대화 상자 컨트롤을 배치합니다.",IDC_STATIC,10,96,300,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "Nettention Inc."
+            VALUE "FileDescription", "Casual Game Sample Client"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GCClient.exe"
+            VALUE "LegalCopyright", "(c) Nettention Inc.  All rights reserved."
+            VALUE "OriginalFilename", "GCClient.exe"
+            VALUE "ProductName", "ProudNet"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "변환", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_GCCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "GCClient 정보(&A)..."
+    IDS_STRING102           "Error: 로그온하지 않고 게이밍을 시도했습니다!"
+    IDS_STRING103           "게임플레이중. CTL키로 커서 자유"
+    IDS_STRING104           "방나가기"
+    IDS_STRING105           "로비로 돌아가기"
+    IDS_STRING106           "돌아가기"
+    IDS_STRING107           "잘못된 서버 주소입니다."
+    IDS_STRING108           "가입"
+    IDS_STRING109           "서버 접속 실패"
+    IDS_STRING110           "로그인창으로..."
+    IDS_STRING111           "서버에 접속되지 않았습니다."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "이전입력한 비밀번호와 일치하지 않습니다."
+    IDS_STRING113           "새로운 GamerData Load가  실패했습니다! 이유: %d"
+    IDS_STRING114           "플레이어 캐릭터 선택이 실패했습니다! 이유: %d"
+    IDS_STRING115           "플레이어 캐릭터 추가가 실패했습니다: %d"
+    IDS_STRING116           "로비 서버에서의 인증이 실패했습니다.\n%s"
+    IDS_STRING117           "더이상 진행할수 없습니다"
+    IDS_STRING118           "새 플레이어 캐릭터를 만듭니다"
+    IDS_STRING119           "참여할 채널을 선택하세요."
+    IDS_STRING120           "진입중"
+    IDS_STRING121           "새 캐릭터 만들기"
+    IDS_STRING122           "캐릭터 없애기"
+    IDS_STRING123           "플레이어 캐릭터를 선택하세요."
+    IDS_STRING124           "서버 접속 실패."
+    IDS_STRING125           "엔트리 서버로 돌아가는데 실패했습니다."
+    IDS_STRING126           "직접 P2P"
+    IDS_STRING127           "우회 P2P"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING128           "방생성"
+    IDS_STRING129           "최대 인원수"
+    IDS_STRING130           "로비 채널"
+    IDS_STRING131           "입장"
+    IDS_STRING132           "대기룸"
+    IDS_STRING133           "시작"
+    IDS_STRING134           "서버 접속 & 로그온"
+    IDS_STRING135           "유저 이름"
+    IDS_STRING136           "Password 확인"
+    IDS_STRING137           "로그온 실패"
+    IDS_STRING138           "서버 주소"
+    IDS_STRING139           "로그온"
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "GCClient information(&A)..."
+    IDS_STRING102           "Error: Logon Required"
+    IDS_STRING103           "Playing"
+    IDS_STRING104           "Back"
+    IDS_STRING105           "Exit Game"
+    IDS_STRING106           "Back"
+    IDS_STRING107           "Wrong Server Address"
+    IDS_STRING108           "Register"
+    IDS_STRING109           "Failed to connect server."
+    IDS_STRING110           "Log on..."
+    IDS_STRING111           "Can not logon Server"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "Wrong Password"
+    IDS_STRING113           "Failed to load new GamerData! Reason: %d"
+    IDS_STRING114           "Failed to select player character! Reason: %d"
+    IDS_STRING115           "Failed to add player character: %d"
+    IDS_STRING116           "Failed authentication on lobby server. \n%s"
+    IDS_STRING117           "Can not paly more"
+    IDS_STRING118           "Create new player charater"
+    IDS_STRING119           "Select channel"
+    IDS_STRING120           "Joining"
+    IDS_STRING121           "New character"
+    IDS_STRING122           "Delete character"
+    IDS_STRING123           "Select player character"
+    IDS_STRING124           "Failed to connect server"
+    IDS_STRING125           "Failed to return Entry Server. Reason"
+    IDS_STRING126           "Direct P2P"
+    IDS_STRING127           "Relay P2P"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING128           "Create Room"
+    IDS_STRING129           "Max User"
+    IDS_STRING130           "Lobby Channel"
+    IDS_STRING131           "Join"
+    IDS_STRING132           "Waiting Room"
+    IDS_STRING133           "Start"
+    IDS_STRING134           "Connect server  & Log on"
+    IDS_STRING135           "User Name"
+    IDS_STRING136           "Re-enter Password"
+    IDS_STRING137           "Failed to log on"
+    IDS_STRING138           "Server Address"
+    IDS_STRING139           "Log on"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\GCClient.rc2"  // Microsoft Visual C++에서 편집되지 않은 리소스
+#include "afxres.rc"         // 표준 구성 요소
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

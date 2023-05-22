@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="GCServer_2008">
+</Property><Property Name="Solution File" Value="D:\Work\R0\ProudNet\Sample\CasualGame2\GCServer\GCServer_2008.sln">
+</Property><Property Name="Date" Value="2010년 11월 2일 화요일">
+</Property><Property Name="Time" Value="오후 16:11:14">
+</Property></Properties><Event ErrorLevel="0" Project="GCServer_2008" Source="GCServer_2008.vcproj" Description="Converting project file 'D:\Work\R0\ProudNet\Sample\CasualGame2\GCServer\GCServer_2008.vcproj'.">
+</Event><Event ErrorLevel="1" Project="GCServer_2008" Source="GCServer_2008.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="2" Project="GCServer_2008" Source="GCServer_2008.vcproj" Description="Failed to upgrade ProjectReference 'D:\Work\R0\ProudNet\Sample\CasualGame2\GCServer\GCCommon\GCCommon_2008.vcproj'. Please make sure the file is not missing from disk, and the solution/project has the correct project reference path.">
+</Event><Event ErrorLevel="0" Project="GCServer_2008" Source="GCServer_2008.vcproj" Description="Done converting to new project file 'D:\Work\R0\ProudNet\Sample\CasualGame2\GCServer\GCServer_2008.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="GCServer_2008" Source="GCServer_2008.vcproj" Description="Converted">
+</Event></UpgradeLog>

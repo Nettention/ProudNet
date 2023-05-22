@@ -1,0 +1,24 @@
+﻿package com.nettention.sample;
+
+rename java(Proud::String, String);
+rename java(Proud::ByteArray, ByteArray);
+rename java(Proud::HostID, int);
+
+rename cs(Proud::String, System.String);
+rename cs(Proud::HostID, Nettention.Proud.HostID);
+rename cs(Proud::ByteArray, Nettention.Proud.ByteArray);
+
+global ChatC2C 3000
+{
+	// 연결된 피어에게 채팅을 보냅니다.
+	//
+	P2P_Chat([in] Proud::HostID p2pGroupID, [in] Proud::String text);
+	
+	// 연결된 피어에게 대량의 데이터를 보냅니다.
+	//
+	P2P_BigData([in] Proud::ByteArray data, [in] Proud::HostID p2pGroupID);
+	
+	// 연결된 피어에게서 받은 대량의 데이터 수신에 대한 확인 패킷을 보냅니다.
+	// 
+	P2P_BigDataAck([in] Proud::HostID p2pGroupID);
+}

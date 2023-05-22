@@ -1,0 +1,13 @@
+cmake_minimum_required (VERSION 3.8.0)
+if(NOT WIN32)
+	message(FATAL_ERROR "[This sample supports only for windows.]")
+endif(NOT WIN32)
+set(CMAKE_SUPPRESS_REGENERATION true)
+
+#The name of the .sln file
+project (Chat)
+
+#Adding VC Projects
+add_subdirectory(ChatCommon)
+add_subdirectory(ChatClient)
+add_subdirectory(ChatServer)

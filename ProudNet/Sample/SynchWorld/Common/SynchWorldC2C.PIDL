@@ -1,0 +1,8 @@
+﻿rename cs(Vector3,UnityEngine.Vector3);
+
+[marshaler(cs)=SynchWorld.Marshaler] global SynchWorldC2C 4000 
+{
+	// 로컬 캐릭터의 위치와 속도를, 로컬 캐릭터를 가시하는 다른 클라이언트들에게 P2P 로 전송한다.
+	// position: 위치, velocity: 속도, direction: 캐릭터가 바라보는 방향
+	P2P_LocalHero_Move([in] Vector3 position,[in] Vector3 velocity,[in] float direction);
+}

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>include_2015</ProjectName>
+    <ProjectGUID>{76AD1AE8-5038-4B98-A909-68813920DC80}</ProjectGUID>
+    <RootNamespace>Proud</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <SccAuxPath>
+    </SccAuxPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(LocalAppData)\Microsoft\VisualStudio\10.0\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(LocalAppData)\Microsoft\VisualStudio\10.0\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'" Label="PropertySheets">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'" Label="PropertySheets">
+    <Import Project="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props" Condition="exists('$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">include_2012</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">include_2012</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'">include_2012</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">include_2012</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|X64'">$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|X64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|X64'">include_2012</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'">include_2012</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|X64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_no_wchar_t|X64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_no_wchar_t|X64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_NO_NTTNTRACE;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\iconv-embed\include\iconv.h" />
+    <ClInclude Include="acr.h" />
+    <ClInclude Include="AddrPort.h" />
+    <ClInclude Include="AdoWrap.h" />
+    <ClInclude Include="AgentCommon.h" />
+    <ClInclude Include="AngleFollower.h" />
+    <ClInclude Include="atomic.h" />
+    <ClInclude Include="BasicTypes.h" />
+    <ClInclude Include="Behavior.h" />
+    <ClInclude Include="BiasManagedPointer.h" />
+    <ClInclude Include="ByteArray.h" />
+    <ClInclude Include="ByteArrayPtr.h" />
+    <ClInclude Include="CallbackContext.h" />
+    <ClInclude Include="CallCtorDtor.h" />
+    <ClInclude Include="ClassBehavior.h" />
+    <ClInclude Include="CoInit.h" />
+    <ClInclude Include="CompactScalarValue.h" />
+    <ClInclude Include="CompressEnum.h" />
+    <ClInclude Include="ConnectParam.h" />
+    <ClInclude Include="CriticalSect.h" />
+    <ClInclude Include="CryptoAes.h" />
+    <ClInclude Include="CryptoFast.h" />
+    <ClInclude Include="CryptoRC4.h" />
+    <ClInclude Include="CryptoRsa.h" />
+    <ClInclude Include="DbCacheClient.h" />
+    <ClInclude Include="DbCacheClient2.h" />
+    <ClInclude Include="DbCacheServer.h" />
+    <ClInclude Include="DbCacheServer2.h" />
+    <ClInclude Include="dbenums.h" />
+    <ClInclude Include="DbLoadedData.h" />
+    <ClInclude Include="DbLoadedData2.h" />
+    <ClInclude Include="DbLogWriter.h" />
+    <ClInclude Include="Deque.h" />
+    <ClInclude Include="DumpClient.h" />
+    <ClInclude Include="dumpcommon.h" />
+    <ClInclude Include="DumpServer.h" />
+    <ClInclude Include="EmergencyLogCommon.h" />
+    <ClInclude Include="EmergencyLogServer.h" />
+    <ClInclude Include="EncryptEnum.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="ErrorInfo.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="ExternalBufferArray.h" />
+    <ClInclude Include="FakeClr.h" />
+    <ClInclude Include="FakeCLRArray.h" />
+    <ClInclude Include="FakeClrBase.h" />
+    <ClInclude Include="FakeCLRRandom.h" />
+    <ClInclude Include="FastArray.h" />
+    <ClInclude Include="FastArrayPtr.h" />
+    <ClInclude Include="FastColl.h" />
+    <ClInclude Include="FastHeap.h" />
+    <ClInclude Include="FastHeapSettings.h" />
+    <ClInclude Include="FastList.h" />
+    <ClInclude Include="FastMap.h" />
+    <ClInclude Include="FastRefCount.h" />
+    <ClInclude Include="FastSet.h" />
+    <ClInclude Include="favorite.h" />
+    <ClInclude Include="FixedLengthArray.h" />
+    <ClInclude Include="HlaDef.h" />
+    <ClInclude Include="HlaDelagate_Common.h" />
+    <ClInclude Include="HlaEntity_C.h" />
+    <ClInclude Include="HlaEntity_S.h" />
+    <ClInclude Include="HlaField.h" />
+    <ClInclude Include="HlaHost_C.h" />
+    <ClInclude Include="HlaHost_S.h" />
+    <ClInclude Include="HlaRuntime.h" />
+    <ClInclude Include="HlaSpace_S.h" />
+    <ClInclude Include="Hla_C.h" />
+    <ClInclude Include="Hla_S.h" />
+    <ClInclude Include="HostIDArray.h" />
+    <ClInclude Include="INetClientEvent.h" />
+    <ClInclude Include="INetCoreEvent.h" />
+    <ClInclude Include="INetServerEvent.h" />
+    <ClInclude Include="IRmiHost.h" />
+    <ClInclude Include="IRMIProxy.h" />
+    <ClInclude Include="IRMIStub.h" />
+    <ClInclude Include="LambdaEventHandler.h" />
+    <ClInclude Include="LambdaWrap.h" />
+    <ClInclude Include="ListNode.h" />
+    <ClInclude Include="LookasideAllocator.h" />
+    <ClInclude Include="Marshaler.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="MessageSummary.h" />
+    <ClInclude Include="MilisecTimer.h" />
+    <ClInclude Include="MiniDumpAction.h" />
+    <ClInclude Include="MiniDumper.h" />
+    <ClInclude Include="NetClientInfo.h" />
+    <ClInclude Include="NetClientInterface.h" />
+    <ClInclude Include="NetClientStats.h" />
+    <ClInclude Include="NetConfig.h" />
+    <ClInclude Include="NetCoreStats.h" />
+    <ClInclude Include="NetPeerInfo.h" />
+    <ClInclude Include="NetPtr.h" />
+    <ClInclude Include="NetServerInterface.h" />
+    <ClInclude Include="NetServerStats.h" />
+    <ClInclude Include="NetStartServerParameter.h" />
+    <ClInclude Include="NetVariant.h" />
+    <ClInclude Include="NTService.h" />
+    <ClInclude Include="NTServiceStartParameter.h" />
+    <ClInclude Include="numutil.h" />
+    <ClInclude Include="OdbcByteData.h" />
+    <ClInclude Include="OdbcCommand.h" />
+    <ClInclude Include="OdbcConnection.h" />
+    <ClInclude Include="OdbcEnum.h" />
+    <ClInclude Include="OdbcException.h" />
+    <ClInclude Include="OdbcRecordset.h" />
+    <ClInclude Include="OdbcVariant.h" />
+    <ClInclude Include="OdbcWrap.h" />
+    <ClInclude Include="P2PGroup.h" />
+    <ClInclude Include="PNCrc.h" />
+    <ClInclude Include="pndefine.h" />
+    <ClInclude Include="pnguid-win32.h" />
+    <ClInclude Include="pnguid.h" />
+    <ClInclude Include="pnmutex.h" />
+    <ClInclude Include="PNPath.h" />
+    <ClInclude Include="pnstdint.h" />
+    <ClInclude Include="PNString.h" />
+    <ClInclude Include="PNStringTraits.h" />
+    <ClInclude Include="pntchar.h" />
+    <ClInclude Include="PnThread.h" />
+    <ClInclude Include="PnTime.h" />
+    <ClInclude Include="PositionFollower.h" />
+    <ClInclude Include="ProcHeap.h" />
+    <ClInclude Include="PropNode.h" />
+    <ClInclude Include="ProudDB.h" />
+    <ClInclude Include="ProudNetClient.h" />
+    <ClInclude Include="ProudNetCommon.h" />
+    <ClInclude Include="ProudNetServer.h" />
+    <ClInclude Include="Ptr.h" />
+    <ClInclude Include="Quantizer.h" />
+    <ClInclude Include="quicksort.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="ReaderWriterMonitor.h" />
+    <ClInclude Include="ReceivedMessage.h" />
+    <ClInclude Include="RecycleNumerFactoryT.h" />
+    <ClInclude Include="Relayer.h" />
+    <ClInclude Include="RMIContext.h" />
+    <ClInclude Include="RoundTripLatencyTest.h" />
+    <ClInclude Include="SafeMemory.h" />
+    <ClInclude Include="SafeMemoryCRT.h" />
+    <ClInclude Include="Semaphore.h" />
+    <ClInclude Include="SendData.h" />
+    <ClInclude Include="ServerParam.h" />
+    <ClInclude Include="ServerUdpAssignMode.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="SocketEnum.h" />
+    <ClInclude Include="SocketInterface.h" />
+    <ClInclude Include="StackNew.h" />
+    <ClInclude Include="stacktrace.h" />
+    <ClInclude Include="StartServerParameterBase.h" />
+    <ClInclude Include="StringEncoder.h" />
+    <ClInclude Include="strpool.h" />
+    <ClInclude Include="SysTime.h" />
+    <ClInclude Include="sysutil.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="ThreadUtil.h" />
+    <ClInclude Include="throw.h" />
+    <ClInclude Include="TimerThread.h" />
+    <ClInclude Include="TimeUtil.h" />
+    <ClInclude Include="Tracer.h" />
+    <ClInclude Include="UnsafeMem.h" />
+    <ClInclude Include="variant-marshaler.h" />
+    <ClInclude Include="Variant.h" />
+    <ClInclude Include="Vector3D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AtlDependent.inl" />
+    <None Include="BiasManagedPointer.inl" />
+    <None Include="d3dxmarshal.inl" />
+    <None Include="Message.inl" />
+    <None Include="MfcDependent.inl" />
+    <None Include="msado15.tlh" />
+    <None Include="msado15.tli" />
+    <None Include="NetVariant.inl" />
+    <None Include="PNStringTraitsImpl.inl" />
+    <None Include="RmiContext.inl" />
+    <None Include="STLMarshal.inl" />
+    <None Include="_x64\msado15.tlh" />
+    <None Include="_x64\msado15.tli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

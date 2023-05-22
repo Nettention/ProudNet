@@ -1,0 +1,14 @@
+cmake_minimum_required (VERSION 3.8.0)
+if(NOT WIN32)
+	message(FATAL_ERROR "[This sample supports only for windows.]")
+endif(NOT WIN32)
+set(CMAKE_SUPPRESS_REGENERATION true)
+
+#The name of the .sln file
+project (SynchWorld)
+
+#Adding VC Projects
+add_subdirectory(../../../DirectX/SampleCommon DXUtil)
+add_subdirectory(Common)
+add_subdirectory(SynchWorldClient)
+add_subdirectory(SynchWorldServer)

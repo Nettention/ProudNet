@@ -1,0 +1,104 @@
+// RMI that send/receive between lobby client and lobby server
+// 로비 클라이언트가 로비 서버와 주고받는 RMI
+global LobbyC2S 3000
+{
+	// encrypted : Logon request to lobby server
+	// Use credential that received from entry client.
+	// encrypted : 로비 서버로의 로그온 요청
+	// entry 클라에서 받은 credential을 사용한다.
+	RequestNextLogon([in] Guid credential);
+
+	// Once data file loading is finished for lobby client then send it to server.
+	// Server does actual lobby related communication for client who sent it.
+	// 로비 클라용 데이터 파일 로딩이 완료됐으면 서버에 이걸 보낸다.
+	// 서버는 이걸 보내온 클라에 대해서만 로비 관련 실제 통신을 수행한다.
+	NotifyChannelFormReady();
+	
+	// Whole chatting in 1 lobby channel
+	// 1개 로비 채널 내에서의 전체 채팅
+	Chat([in] CStringW chatText);
+	
+	// Room creation request
+	// Receive room creation information (room type, room title, maximum users, etc) with parameter.
+	// 방 생성 요청
+	// 방 생성 정보(방 타입,방제, 최대인원 수 등)을 파라메터로 받는다.
+	RequestCreateGameRoom([in] CGameRoomParameter gameRoomParam);
+	
+	// Request entering room where already joined in
+	// Receive room entering information (room guid, password of room, etc) with parameter.
+	// 이미 있는 방에 들어가기 요청
+	// 방 진입 정보(방 guid, 방의 비밀번호 등)을 파라메터로 받는다.
+	RequestJoinGameRoom([in] CJoinGameRoomParameter param);
+}
+
+global LobbyS2C 4000
+{
+	
+	// This warning message send from server when it receive RMI request that has to logon first without logon.
+	// 로그온하지 않은 채로 로그온이 선결되어야 하는 RMI 요청을 받으면 서버에서 보내는 경고 메시지다.
+	NotifyUnauthedAccess();
+
+	// It is error message that send to client when server occurs unexpacted error.
+	// 서버에서 비의도된 에러가 발생하면 클라에게 보내주는 에러 메시지다.
+	ShowError([in] String errTxt);	
+
+	// Logon failed	
+	// 로그온 실패	
+	NotifyNextLogonFailed([in] ErrorType reason);
+	
+	// Logon succeed
+	// 로그온 성공
+	NotifyNextLogonSuccess([in] Guid Gamerguid,[in] CHeroPublishInfo selectedHeroInfo);
+
+	// Order adding itself and other player character list item
+	// 자기 및 타 플레이어 캐릭터 리스트 항목 추가를 클라에게 지시	
+	HeroSlot_Appear([in] CHeroPublishInfo info);
+	
+	// Order remove itself and other player character list item	
+	// 자기 및 타 플레이어 캐릭터 리스트 항목 제거를 클라에게 지시	
+	HeroSlot_Disappear([in] Guid heroGuid);
+	
+	// Order adding game room list item to client
+	// 게임방 리스트 항목 추가를 클라에게 지시
+	GameRoom_Appear([in] CGameRoomParameter info);
+	
+	// Order changing game room list item to client
+	// 게임방 리스트 항목 변경을 클라에게 지시
+	GameRoom_ShowState([in] CGameRoomParameter info);
+	
+	// Order removing game room list item to client
+	// 게임방 리스트 항목 제거를 클라에게 지시
+	GameRoom_Disappear([in] Guid roomGuid);
+	
+	// Notify to client about information of local player character
+	// 로컬 플레이어 캐릭터의 정보를 클라에게 노티
+	LocalHeroSlot_Appear([in] CHeroPublishInfo info);
+	
+	// Client receive other gamer's whole chatting message.
+	// 타 게이머의 전체 채팅을 클라가 받는다.
+	ShowChat([in] Guid heroGuid,[in] CStringW chatText);
+
+	// Notify failed to room creation request
+	// 방 생성 요청 실패 노티
+	NotifyCreateRoomFailed([in] CasualResult reason);
+	
+	// Notify scceed to room creation request
+	// Created room information keep as parameter.
+	// 방 생성 요청의 성공 노티
+	// 생성된 방 정보가 파라메터로 있다.
+	NotifyCreateRoomSuccess([in] CGameRoomParameter info);
+
+	// Notify failed to entering room request
+	// Receive reason of failure with parameter.
+	// 방 진입 요청 실패 노티
+	// 진입 실패 사유를 파라메터로 받는다.
+	NotifyJoinRoomFailed([in] CasualResult reason);
+	
+	// Notify succeed to entering room request
+	// Receive information of room (server address, etc).
+	// 방 진입 요청 성공 노티
+	// 진입할 방의 정보(서버 주소 등)을 받는다.
+	NotifyJoinRoomSuccess([in] CGameRoomParameter info);
+
+}
+

@@ -1,0 +1,41 @@
+﻿ProudNet Software End User License Agreement
+
+IMPORTANT! PLEASE READ THIS CAREFULLY!
+
+This ProudNet Software End User License Agreement (“Agreement”) is entered by and between Nettention (“Company”) and you (‘End-User”) for the use of ProudNet Software Product (“Software”). Software includes all computer software and documentations related to Software as well as electronic documents, files, updates, and other supplements to be provided to End-User on a regular or irregular basis by Company. Upon installing or using Software, you will be deemed as agreed on every terms and conditions stated within this Agreement. Otherwise, please do not install of use this Software for any purposes. 
+
+SECTION 1 SOFTWARE LICENSE
+1.1	Grant of License: Subject to the restrictions in this Agreement, Company grants non-exclusive, non-transferable license of Software to End-User.
+1.2	Restriction on Use 
+	a)	End-User hereby agrees to install and use Software only on a computer or computers permitted by Company. End-User also acknowledges that using or sharing Software in or with other computers than what permitted by Company is prohibited and deemed as an act of breach of this Agreement. 
+	b)	End-User shall not at any time reverse-engineer, decompile, or dis-assemble any portion of Software. Notwithstanding anything to the contrary contained in this agreement, End-User shall not distribute, duplicate, reproduce, translate, transmit, publish, sell, alter, edit, expand, create any derivatives, rent, transfer, set pledge, or set mortgage any portion of Software. Company shall not remove or alter the security software or system installed to Software by Company to protect the trademark and technology of Software  
+	c)	This Software is only permitted to use as a stand-alone product. Company shall not separate or remove any components of Software unless agreed by Company.  
+	d)	Trademark Notice: This Agreement doesn't grant any right for End-User to include or display Company's firm name or Software name in any parts of product. 
+SECTION 2 UPDATES & UPGRADES
+End-User acknowledges that the previous Software as portion or whole may not work properly whenever any new update or upgrade is applied to Software. The use of updated or upgraded Software shall be subject to all terms and conditions of this Agreement. 
+
+SECTION 3 PROPRIETARY RIGHTS
+End-User acknowledges that every intellectual property rights and copyrights of Software including its video, photos, animations, audio, sound, text and program are owned by Company and agrees to use Software only to the extent of restrictions of use, terms and conditions within this Agreement. End-User shall treat all trade secrets and information related to Software as confidential information (“Confidential Information”). End-User shall use Confidential Information solely to the limited extent to necessary for exercising its rights under this agreement and shall not disclosure to any third person or party for any purposes. 
+
+SECTION 4 LIMITED WARRANTY
+
+4.1	Without limiting the foregoing, Company specifically does not warrant, guarantee, or make any representations i) that the software will meet End-User's every requirement, ii) that the software will be error free or function in an uninterrupted manner iii) regarding the use, or the results of the use, of the software in terms of correctness, accuracy, reliability, or other otherwise. The entire risk as to the results and performance of Software is assumed by End-User. Company shall continuously use its reasonable effort to update or upgrade Software, however due to the limitation of technology; Software may affect negatively toward or destroy End-User's computer hardware, software, or files (“Data”). Any loss of data by the use of Software is at End-User's sole responsibility that Company can only suggest End-User to create backup for important Data before installing Software or while using Software. 
+4.2	In the event that any error occurs in Software, Company or a person designated by Company (Software retailer) shall use its reasonable efforts to modify, replace Software or provide updates to correct such effort. However, Company does not warrant or guarantee Software if Software is damaged by i) using Software in methods not specified by Company, ii) being repaired by other companies or persons that Company or a person designated by Company. iii) error caused by End-User's intention of mis-use of Software, iv) unavoidable failures in performance resulting from acts of God, accident or other causes beyond its control.
+4.3     Limited Indemnity:  In the event that any damage loss is occurred to End-User due to any defect or flaw in Software caused by Company's negligence or intention, Company shall pay damages only to the extent of the amount paid to Company by End-User. Company does not indemnify End-User for damage caused by any other data than Software. 
+4.4 	Other Warranties:  Company is not responsible whatsoever for any other warranties or guarantees whatsoever provided to End-User by any means of communication of Software supplier, retailer or any third person. 
+
+SECTION 5 (COLLECTION OF PERSONAL INFORMATION)
+
+End-User acknowledges that Company shall have a right to gather or collect private or personal information of End-User in terms of protecting the copyright and intellectual property right of Software. Company guarantees to use this Personal Information only to the limited extend of protecting the copyright of intellectual property right and does not provide or disclosure to a third person unless agreed by End-User. 
+
+SECTION 6 (WRITTEN CONTRACT)
+
+If End-User enters a written form of either “ProudNet Evaluation License Agreement” or “ProudNet Official License Agreement” then this Agreement shall be deemed as terminated and a written Agreement shall become effective immediately. End-User can only use Software for 30 days under the terms or conditions within this Agreement unless extended by entering a written form of contract. 
+
+SECTION 7 (INFRINGEMENT)
+If End-User makes any illegal duplication of Software or uses Software illegally (cracks) for its portion or whole, then End-User must pay Company \ 900,000,000 in Korean Won currency and all fees and payments associated of legal proceedings arose from any illegal acts against Company and Company's Software.  
+
+SECTION 8 (GOVERNING LAW)
+
+The Agreement will be governed by and construed in accordance with the laws of Republic of Korea. Each party irrevocably submits and consents to the exclusive jurisdiction of the courts in Korea for the determination of any dispute arising under the agreement.
+

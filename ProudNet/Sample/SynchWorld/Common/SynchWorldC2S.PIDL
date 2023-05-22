@@ -1,0 +1,11 @@
+﻿rename cs(Vector3,UnityEngine.Vector3);
+
+[marshaler(cs)=SynchWorld.Marshaler] global SynchWorldC2S 2000 
+{
+	// 클라에서, 서버와의 연결 시도 및 게임 플레이 준비가 되었고, 최초의 시작 위치를 설정한 후
+	// 서버에 보내는 신고 메시지
+	// heroName: 캐릭터 이름
+	// position: 위치
+	// direction: 방향	
+	RequestLocalHeroSpawn([in] String heroName,[in]Vector3 position, [in]float direction);
+}

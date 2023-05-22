@@ -1,0 +1,20 @@
+﻿rename cs(Vector3,UnityEngine.Vector3);
+rename cs(HostID,Nettention.Proud.HostID);
+
+[marshaler(cs)=SynchWorld.Marshaler] global SynchWorldS2C 3000 
+{
+	// 클라의 로컬 캐릭을 가시하는 타 클라들을 가리키는 P2P group의 ID를 노티한다.
+	NotifyLocalHeroViewersGroupID([in] HostID localHeroViewersGroupID);
+	
+	// 원격 캐릭이 등장했다는 신고
+	// heroOwnerID: 캐릭터를 조종하는 클라이언트의 HostID
+	// heroName: 캐릭터의 이름
+	// position 캐릭터의 위치
+	// velocity 방향
+	// direction 캐릭터가 바라보는 방향
+	RemoteHero_Appear([in] HostID heroOwnerID,[in] String heroName,[in] Vector3 position,[in] Vector3 velocity,[in] float direction);
+	
+	// 원격 캐릭의 소멸을 신고
+	// heroOwnerID 소멸하는 캐릭터를 조종하는 클라이언트의 ID
+	RemoteHero_Disappear([in] HostID heroOwnerID);
+}

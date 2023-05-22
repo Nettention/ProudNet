@@ -1,0 +1,128 @@
+// RMI that send/receive between entry server and client
+// Entery server and client does authentication process through gamer ID, select&delete&add player character, select lobby channel which wish to join in.
+// entry 서버와 클라이언트간 주고받는 RMI
+// entry 서버와 클라이언트는 게이머 ID를 통한 인증 과정, 플레이어 캐릭터 선택&제거&추가, 들어가고자 하는 로비 채널 선택 등을 한다.
+global EntryC2S 1500
+{
+	// Load again when it moves from lobby server to entry server
+	//로비서버에서 엔트리로 넘어올때 다시 로드
+	RequestReturnToEntry([in] Guid credential);
+		
+	// Register request 
+	// 회원가입요청 
+	RequestCreateNewGamer([in] String gamerID,[in] String Password); 
+	
+	// encrypted : Logon request to server when it receive game ID and password.
+	// encrypted : 게이머 ID와 비밀번호를 받으면 서버에 로그온 요청을 한다.
+	RequestFirstLogon([in] String gamerID,[in] String gamerPassword);
+	
+	// Request local player character list.
+	// 로컬 플레이어 캐릭터 리스트를 요청한다.
+	RequestHeroSlots();
+	
+	// Send selection about player character that join in lobby together to server.
+	// 로비에 갖고 들어갈 플레이어 캐릭터를 선택했음을 서버에 보낸다.
+	RequestSelectHero([in] Guid heroGuid);
+	
+	// Requset add new player character to server.
+	// New player character adding is not succeed immediately. Once it double check name of player character at server then client receive result that one of NotifyAddHeroSuccess or Failed.
+	// 새 플레이어 캐릭터 추가를 서버에게 요청한다.
+	// 새 플레이어 캐릭터 추가는 즉시 성공하지 않는다. 서버에서 플레이어 캐릭터의 이름 중복 등의 여부를 파악 후
+	// 결과를 NotifyAddHeroSuccess or Failed를 클라에서 받는다.
+	RequestAddHero([in] CStringW heroName, [in] int heroType);
+
+	// Request deletion of old player character to server.
+	// This process has finished instantly.
+	// 구 플레이어 캐릭터 제거를 서버에게 요청한다.
+	// 이 과정은 즉시 완료된다.
+	RequestRemoveHero([in] Guid heroGuid);
+	
+	// Request joinable lobby channel list to server.
+	// 들어갈 수 있는 로비 채널 리스트를 서버에게 요청한다.
+	RequestLobbyList();
+	
+}
+
+global EntryS2C 2000
+{
+	// Response about RequestCreateNewGamer
+	// RequestCreateNewGamer에 대한 응답
+	NotifyCreateNewGamerSuccess([in] Guid Gamerguid);
+	NotifyCreateNewGamerFailed([in] int reason);
+	
+	// This warning message send from server when it receive RMI request that has to logon first without logon.
+	// 로그온하지 않은 채로 로그온이 선결되어야 하는 RMI 요청을 받으면 서버에서 보내는 경고 메시지다.
+	NotifyUnauthedAccess();
+	
+	// It is error message that send to client when server occurs unexpacted error.
+	// 서버에서 비의도된 에러가 발생하면 클라에게 보내주는 에러 메시지다.
+	ShowError([in] String errTxt);	
+	
+	// Client receives message when it failed to logon process
+	// 로그온 과정이 실패시 클라가 메시지
+	NotifyFirstLogonFailed([in] int reason);
+
+	// Re-logon failed message because of moving server
+	// 서버 이동으로 인한 재접속 실패 메시지
+	NotifyReturnToEntryFailed([in] int reason);
+
+	// Client receives message once it succeed to logon. It includes credential. 
+	// 로그온 성공시 클라가 받는 메시지. credential이 포함된다. 
+	NotifyFirstLogonSuccess([in] Guid Gamerguid,[in] Guid credential);
+
+	// Receiving message when it failed to character selection request to server
+	// 서버에 보낸 캐릭터 선택 요청이 실패하면 받는 메시지	
+	NotifySelectHeroFailed([in] int reason);
+	
+	// When sent character selection request to server is succeed then client receives it.
+	// 서버에 보낸 캐릭터 선택 요청이 성공하면 클라가 받는다.
+	NotifySelectHeroSuccess([in] CStringW heroname);
+
+	// Start to receive local player character list for character selection.
+	// 캐릭터 선택을 위해 로컬 플레이어 캐릭터 리스트를 받기 시작
+	HeroList_Begin();
+	
+	// Receiving local player character list for character selection.
+	// 캐릭터 선택을 위해 로컬 플레이어 캐릭터 리스트를 받는 중
+	HeroList_Add([in] CStringW heroName,[in]Guid heroGuid,[in]int heroType,[in]LONGLONG heroScore);
+	
+	// End step of local player character receiving process for characer selection.
+	// 캐릭터 선택을 위해 로컬 플레이어 캐릭터 리스트를 받는 과정의 끝
+	HeroList_End();
+	
+	// This player characer list has removed by user but user can recover it.
+	// 사용자에 의해 제거되었지만 사용자가 원하면 복원할 수 있는 플레이어 캐릭터 목록
+	RemovedHeroList_Begin();
+	RemovedHeroList_Add([in] CStringW heroName,[in] Guid heroGuid);
+	RemovedHeroList_End();
+	
+	// It notices one local player has chosen.
+	// 로컬 플레이어 중 하나를 선택했음을 노티한다.
+	NotifySelectedHero([in] Guid heroGuid); 
+	
+	// Succeed to add new player character
+	// 새 플레이어 캐릭터 추가가 성공했음
+	NotifyAddHeroSuccess();
+	
+	// Failed to add new player character. reason contains why.
+	// 새 플레이어 캐릭터 추가가 실패했음. reason에는 사유가 들어있다.
+	NotifyAddHeroFailed([in] int reason);
+
+	// Old player character removal has succeed
+	// 구 플레이어 캐릭터 제거가 성공했음
+	NotifyRemoveHeroSuccess();
+	
+	// Starts to receive lobby channel list from server
+	// 로비 채널 리스트를 서버로부터 받기 시작
+	LobbyList_Begin();
+	
+	// Receiving lobby channel list
+	// 로비 채널 리스트 받는 중
+	LobbyList_Add([in] CStringW lobbyName,[in] NamedAddrPort serverAddr,[in] int gamerCount);
+	
+	// End of receiving lobby channel list
+	// 로비 채널 리스트 받기 끝
+	LobbyList_End();
+	
+}
+

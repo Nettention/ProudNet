@@ -1,0 +1,426 @@
+﻿// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39B77EA11946A5F000139EB2 /* ChatC2C.PIDL in Resources */ = {isa = PBXBuildFile; fileRef = 39B77E9E1946A5F000139EB2 /* ChatC2C.PIDL */; };
+		39B77EA21946A5F000139EB2 /* ChatC2S.PIDL in Resources */ = {isa = PBXBuildFile; fileRef = 39B77E9F1946A5F000139EB2 /* ChatC2S.PIDL */; };
+		39B77EA31946A5F000139EB2 /* ChatS2C.PIDL in Resources */ = {isa = PBXBuildFile; fileRef = 39B77EA01946A5F000139EB2 /* ChatS2C.PIDL */; };
+		559986821578699F00365E03 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 559986811578699F00365E03 /* libiconv.dylib */; };
+		55F4B719157771D400DB47E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F4B718157771D400DB47E1 /* UIKit.framework */; };
+		55F4B71B157771D400DB47E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F4B71A157771D400DB47E1 /* Foundation.framework */; };
+		55F4B71D157771D400DB47E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F4B71C157771D400DB47E1 /* CoreGraphics.framework */; };
+		55F8AB36158883F50041D877 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB1D158883F50041D877 /* Application.xib */; };
+		55F8AB3C158883F50041D877 /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB25158883F50041D877 /* ConnectViewController.xib */; };
+		55F8AB3F158883F50041D877 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB29158883F50041D877 /* MainViewController.xib */; };
+		55F8AB41158883F50041D877 /* P2PChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB2C158883F50041D877 /* P2PChatViewController.xib */; };
+		55F8AB43158883F50041D877 /* P2PGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB2F158883F50041D877 /* P2PGroupViewController.xib */; };
+		55F8AB45158883F50041D877 /* ServerChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB32158883F50041D877 /* ServerChatViewController.xib */; };
+		55F8AB49158886870041D877 /* ChatIOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB47158886870041D877 /* ChatIOS-Info.plist */; };
+		55F8AB4F158887430041D877 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55F8AB4D158887430041D877 /* InfoPlist.strings */; };
+		55F8AB73158890E60041D877 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB1C158883F50041D877 /* AppDelegate.mm */; };
+		55F8AB74158890E60041D877 /* ChatClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB21158883F50041D877 /* ChatClient.mm */; };
+		55F8AB75158890E60041D877 /* ConnectViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB24158883F50041D877 /* ConnectViewController.mm */; };
+		55F8AB76158890E60041D877 /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB28158883F50041D877 /* MainViewController.mm */; };
+		55F8AB77158890E60041D877 /* P2PChatViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB2B158883F50041D877 /* P2PChatViewController.mm */; };
+		55F8AB78158890E60041D877 /* P2PGroupViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB2E158883F50041D877 /* P2PGroupViewController.mm */; };
+		55F8AB79158890E60041D877 /* ServerChatViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB31158883F50041D877 /* ServerChatViewController.mm */; };
+		55F8AB7A158890E60041D877 /* Var.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB34158883F50041D877 /* Var.mm */; };
+		55F8AB7B158890E60041D877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F8AB26158883F50041D877 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		A490DF0E15AFF7D6007175F4 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		39B77E9E1946A5F000139EB2 /* ChatC2C.PIDL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ChatC2C.PIDL; path = ../../ChatCommon/ChatC2C.PIDL; sourceTree = "<group>"; };
+		39B77E9F1946A5F000139EB2 /* ChatC2S.PIDL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ChatC2S.PIDL; path = ../../ChatCommon/ChatC2S.PIDL; sourceTree = "<group>"; };
+		39B77EA01946A5F000139EB2 /* ChatS2C.PIDL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ChatS2C.PIDL; path = ../../ChatCommon/ChatS2C.PIDL; sourceTree = "<group>"; };
+		559986811578699F00365E03 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		55F4B714157771D400DB47E1 /* ChatIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F4B718157771D400DB47E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55F4B71A157771D400DB47E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55F4B71C157771D400DB47E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55F8AB1B158883F50041D877 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ChatIOS/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		55F8AB1C158883F50041D877 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ChatIOS/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB1D158883F50041D877 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Application.xib; path = ChatIOS/Application.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB20158883F50041D877 /* ChatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatClient.h; path = ChatIOS/ChatClient.h; sourceTree = SOURCE_ROOT; };
+		55F8AB21158883F50041D877 /* ChatClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ChatClient.mm; path = ChatIOS/ChatClient.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB23158883F50041D877 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ChatIOS/ConnectViewController.h; sourceTree = SOURCE_ROOT; };
+		55F8AB24158883F50041D877 /* ConnectViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ConnectViewController.mm; path = ChatIOS/ConnectViewController.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB25158883F50041D877 /* ConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConnectViewController.xib; path = ChatIOS/ConnectViewController.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB26158883F50041D877 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChatIOS/main.m; sourceTree = SOURCE_ROOT; };
+		55F8AB27158883F50041D877 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ChatIOS/MainViewController.h; sourceTree = SOURCE_ROOT; };
+		55F8AB28158883F50041D877 /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainViewController.mm; path = ChatIOS/MainViewController.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB29158883F50041D877 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ChatIOS/MainViewController.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB2A158883F50041D877 /* P2PChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = P2PChatViewController.h; path = ChatIOS/P2PChatViewController.h; sourceTree = SOURCE_ROOT; };
+		55F8AB2B158883F50041D877 /* P2PChatViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = P2PChatViewController.mm; path = ChatIOS/P2PChatViewController.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB2C158883F50041D877 /* P2PChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = P2PChatViewController.xib; path = ChatIOS/P2PChatViewController.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB2D158883F50041D877 /* P2PGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = P2PGroupViewController.h; path = ChatIOS/P2PGroupViewController.h; sourceTree = SOURCE_ROOT; };
+		55F8AB2E158883F50041D877 /* P2PGroupViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = P2PGroupViewController.mm; path = ChatIOS/P2PGroupViewController.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB2F158883F50041D877 /* P2PGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = P2PGroupViewController.xib; path = ChatIOS/P2PGroupViewController.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB30158883F50041D877 /* ServerChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerChatViewController.h; path = ChatIOS/ServerChatViewController.h; sourceTree = SOURCE_ROOT; };
+		55F8AB31158883F50041D877 /* ServerChatViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ServerChatViewController.mm; path = ChatIOS/ServerChatViewController.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB32158883F50041D877 /* ServerChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServerChatViewController.xib; path = ChatIOS/ServerChatViewController.xib; sourceTree = SOURCE_ROOT; };
+		55F8AB33158883F50041D877 /* Var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Var.h; path = ChatIOS/Var.h; sourceTree = SOURCE_ROOT; };
+		55F8AB34158883F50041D877 /* Var.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Var.mm; path = ChatIOS/Var.mm; sourceTree = SOURCE_ROOT; };
+		55F8AB47158886870041D877 /* ChatIOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ChatIOS-Info.plist"; path = "ChatIOS/ChatIOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		55F8AB48158886870041D877 /* ChatIOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ChatIOS-Prefix.pch"; path = "ChatIOS/ChatIOS-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		55F8AB4E158887430041D877 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ChatIOS/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55F4B711157771D400DB47E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				559986821578699F00365E03 /* libiconv.dylib in Frameworks */,
+				55F4B719157771D400DB47E1 /* UIKit.framework in Frameworks */,
+				55F4B71B157771D400DB47E1 /* Foundation.framework in Frameworks */,
+				55F4B71D157771D400DB47E1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55F4B709157771D300DB47E1 = {
+			isa = PBXGroup;
+			children = (
+				559986811578699F00365E03 /* libiconv.dylib */,
+				55F4B71E157771D400DB47E1 /* ChatIOS */,
+				55F4B717157771D400DB47E1 /* Frameworks */,
+				55F4B715157771D400DB47E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55F4B715157771D400DB47E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55F4B714157771D400DB47E1 /* ChatIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55F4B717157771D400DB47E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F4B718157771D400DB47E1 /* UIKit.framework */,
+				55F4B71A157771D400DB47E1 /* Foundation.framework */,
+				55F4B71C157771D400DB47E1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55F4B71E157771D400DB47E1 /* ChatIOS */ = {
+			isa = PBXGroup;
+			children = (
+				39B77E9E1946A5F000139EB2 /* ChatC2C.PIDL */,
+				39B77E9F1946A5F000139EB2 /* ChatC2S.PIDL */,
+				39B77EA01946A5F000139EB2 /* ChatS2C.PIDL */,
+				55F8AB1B158883F50041D877 /* AppDelegate.h */,
+				55F8AB1C158883F50041D877 /* AppDelegate.mm */,
+				55F8AB1D158883F50041D877 /* Application.xib */,
+				55F8AB20158883F50041D877 /* ChatClient.h */,
+				55F8AB21158883F50041D877 /* ChatClient.mm */,
+				55F8AB23158883F50041D877 /* ConnectViewController.h */,
+				55F8AB24158883F50041D877 /* ConnectViewController.mm */,
+				55F8AB25158883F50041D877 /* ConnectViewController.xib */,
+				55F8AB27158883F50041D877 /* MainViewController.h */,
+				55F8AB28158883F50041D877 /* MainViewController.mm */,
+				55F8AB29158883F50041D877 /* MainViewController.xib */,
+				55F8AB2A158883F50041D877 /* P2PChatViewController.h */,
+				55F8AB2B158883F50041D877 /* P2PChatViewController.mm */,
+				55F8AB2C158883F50041D877 /* P2PChatViewController.xib */,
+				55F8AB2D158883F50041D877 /* P2PGroupViewController.h */,
+				55F8AB2E158883F50041D877 /* P2PGroupViewController.mm */,
+				55F8AB2F158883F50041D877 /* P2PGroupViewController.xib */,
+				55F8AB30158883F50041D877 /* ServerChatViewController.h */,
+				55F8AB31158883F50041D877 /* ServerChatViewController.mm */,
+				55F8AB32158883F50041D877 /* ServerChatViewController.xib */,
+				55F8AB33158883F50041D877 /* Var.h */,
+				55F8AB34158883F50041D877 /* Var.mm */,
+				55F4B71F157771D400DB47E1 /* Supporting Files */,
+			);
+			path = ChatIOS;
+			sourceTree = "<group>";
+		};
+		55F4B71F157771D400DB47E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55F8AB4D158887430041D877 /* InfoPlist.strings */,
+				55F8AB26158883F50041D877 /* main.m */,
+				55F8AB47158886870041D877 /* ChatIOS-Info.plist */,
+				55F8AB48158886870041D877 /* ChatIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55F4B713157771D400DB47E1 /* ChatIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55F4B72C157771D400DB47E1 /* Build configuration list for PBXNativeTarget "ChatIOS" */;
+			buildPhases = (
+				55F4B711157771D400DB47E1 /* Frameworks */,
+				55F4B712157771D400DB47E1 /* Resources */,
+				39B77EA41946A82500139EB2 /* ShellScript */,
+				55F8AB72158890CE0041D877 /* Sources */,
+			);
+			buildRules = (
+				A490DF0E15AFF7D6007175F4 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = ChatIOS;
+			productName = ChatIOS;
+			productReference = 55F4B714157771D400DB47E1 /* ChatIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55F4B70B157771D300DB47E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					55F4B713157771D400DB47E1 = {
+						DevelopmentTeam = 95G6LQNTVX;
+					};
+				};
+			};
+			buildConfigurationList = 55F4B70E157771D300DB47E1 /* Build configuration list for PBXProject "ChatIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55F4B709157771D300DB47E1;
+			productRefGroup = 55F4B715157771D400DB47E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55F4B713157771D400DB47E1 /* ChatIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55F4B712157771D400DB47E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F8AB36158883F50041D877 /* Application.xib in Resources */,
+				39B77EA11946A5F000139EB2 /* ChatC2C.PIDL in Resources */,
+				55F8AB3C158883F50041D877 /* ConnectViewController.xib in Resources */,
+				39B77EA21946A5F000139EB2 /* ChatC2S.PIDL in Resources */,
+				55F8AB3F158883F50041D877 /* MainViewController.xib in Resources */,
+				55F8AB41158883F50041D877 /* P2PChatViewController.xib in Resources */,
+				55F8AB43158883F50041D877 /* P2PGroupViewController.xib in Resources */,
+				55F8AB45158883F50041D877 /* ServerChatViewController.xib in Resources */,
+				55F8AB49158886870041D877 /* ChatIOS-Info.plist in Resources */,
+				39B77EA31946A5F000139EB2 /* ChatS2C.PIDL in Resources */,
+				55F8AB4F158887430041D877 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39B77EA41946A82500139EB2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mono ../../../util/PIDL_UnProtect.exe ../ChatCommon/* -outdir ./ChatIOS/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55F8AB72158890CE0041D877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F8AB73158890E60041D877 /* AppDelegate.mm in Sources */,
+				55F8AB74158890E60041D877 /* ChatClient.mm in Sources */,
+				55F8AB75158890E60041D877 /* ConnectViewController.mm in Sources */,
+				55F8AB76158890E60041D877 /* MainViewController.mm in Sources */,
+				55F8AB77158890E60041D877 /* P2PChatViewController.mm in Sources */,
+				55F8AB78158890E60041D877 /* P2PGroupViewController.mm in Sources */,
+				55F8AB79158890E60041D877 /* ServerChatViewController.mm in Sources */,
+				55F8AB7A158890E60041D877 /* Var.mm in Sources */,
+				55F8AB7B158890E60041D877 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55F8AB4D158887430041D877 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55F8AB4E158887430041D877 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55F4B72A157771D400DB47E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		55F4B72B157771D400DB47E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		55F4B72D157771D400DB47E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChatIOS/ChatIOS-Prefix.pch";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
+				INFOPLIST_FILE = "ChatIOS/ChatIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lib/IOS/Debug\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/../../../lib/IOS/Debug/libProudNetClient.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55F4B72E157771D400DB47E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChatIOS/ChatIOS-Prefix.pch";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
+				INFOPLIST_FILE = "ChatIOS/ChatIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../lib/IOS/Release\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/../../../lib/IOS/Release/libProudNetClient.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55F4B70E157771D300DB47E1 /* Build configuration list for PBXProject "ChatIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F4B72A157771D400DB47E1 /* Debug */,
+				55F4B72B157771D400DB47E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55F4B72C157771D400DB47E1 /* Build configuration list for PBXNativeTarget "ChatIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F4B72D157771D400DB47E1 /* Debug */,
+				55F4B72E157771D400DB47E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55F4B70B157771D300DB47E1 /* Project object */;
+}

@@ -1,0 +1,24 @@
+﻿package com.nettention.sample;
+
+rename java(Proud::String, String);
+rename java(Proud::HostID, int);
+rename java(Proud::ByteArray, ByteArray);
+
+rename cs(Proud::String, System.String);
+rename cs(Proud::HostID, Nettention.Proud.HostID);
+rename cs(Proud::ByteArray, Nettention.Proud.ByteArray);
+
+global ChatS2C 2000
+{
+	// 클라이언트로 받은 채팅 메시지를 다른 모든 클라이언트에게 전송합니다.
+	//
+	ShowChat([in] Proud::String userName,[in] Proud::String text);
+	
+	// 새로운 클라이언트가 접속하였을때 전송합니다.
+	//
+	UserList_Add([in] Proud::String userName,[in] Proud::HostID hostID);
+	
+	// 기존 클라이언트가 나갔을때 전송합니다.
+	//
+	UserList_Remove([in] Proud::HostID hostID);
+}

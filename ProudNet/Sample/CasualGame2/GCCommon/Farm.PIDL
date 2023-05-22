@@ -1,0 +1,77 @@
+// RMI that communication between battle server, lobby server, entry server and farm server. 
+// Which mean communication between servers.
+// 배틀 서버,로비 서버,entry server,farm 서버간 통신하는 RMI. 
+// 즉 서버간 통신이다.
+global FarmC2S 10000
+{
+	// Authentication process from farm client (each game server) to farm server
+	// 팜 클라(각 게임 서버)가 팜 서버에 인증하는 과정
+	RequestFarmLogon([in] String FarmName,[in] String FarmClientName,[in] int FarmClientType);
+}
+
+global FarmS2C 11000
+{
+	// Failed to logon of farm client
+	// 팜 클라의 로그온의 실패
+	NotifyFarmLogonFailed([in] ErrorType reason);
+	
+	// Succeed to logon of farm client
+	// 팜 클라의 로그온의 성공
+	NotifyFarmLogonSuccess();
+	
+}
+
+global FarmC2C 12000
+{
+	// Each farm clients are broadcasting own status to rest of farm client with every specific time.
+	// 일정 시간마다 각 팜 클라이언트는 나머지 팜 클라들에게 자신의 상태를 브로드캐스트한다.
+	NotifyFarmClientInfo([in] CFarmClientInfo info);
+	
+	// Game room creation request 
+	// Send lobby server to battle server
+	// 게임방 생성 요청 
+	// 로비 서버->배틀 서버로 전송됨
+	RequestCreateGameRoom([in] HostID requestedLobbyClientID,[in] CGameRoomParameter gameRoomParam);
+	
+	// Report game room creation result
+	// Send from battle server to lobby server
+	// 게임방 생성 결과 통보
+	// 배틀 서버에서 로비 서버로 전송됨
+	NotifyCreateGameRoomResult([in] HostID requestedLobbyClientID,[in] CasualResult result,[in] CGameRoomParameter createdGameRoomParam);
+
+	// GameRoom_Appear, Disappear, ShowState uses to deliver game room status at battle server to lobby server.
+	// GameRoom_Appear, Disappear, ShowState는 배틀 서버에서의 게임방 상태를 로비 서버로 전달하는 용도로 쓰인다.
+	GameRoom_Appear([in] CGameRoomParameter roomInfo);
+	GameRoom_ShowState([in] CGameRoomParameter roomInfo);
+	GameRoom_Disappear([in] Guid roomGuid);
+
+	// Game room entering request
+	// Send from lobby server to battle server
+	// 게임방 진입 요청
+	// 로비 서버->배틀 서버로 전송됨
+	RequestJoinGameRoom([in] HostID requestedLobbyClientID,[in] CJoinGameRoomParameter param);
+	
+	// Report game room entering result
+	// Send from battle server to lobby server
+	// 게임방 진입 결과 통보
+	// 배틀 서버에서 로비 서버로 전송됨
+	NotifyJoinGameRoomResult([in] HostID requestedLobbyClientID,[in] CasualResult result,[in] CGameRoomParameter createdGameRoomParam);
+	
+	// Status server notice about StatusServer itself from Farm Client when member has joined in.
+	// 멤버에 조인 되었을 때 조인된 Farm Client중 Status 서버가 자신이 StatusServer임을 알린다.
+	NotifyStatusServer();
+	
+	// Creates authentication key. UserHostID is for user searching when it received Credential
+	// 인증키를 만든다. UserHostID 는 Credential 받았을 때 유저 검색용
+	RequestCreateCredential([in] Guid gamerUUID, [in] HostID UserHostID);
+	NotifyCreatedCredential([in] Guid credential, [in] HostID UserHostID);
+	
+	// Check whether authentication key is correct or not.
+	// 인증키가 맞는지 확인을 해준다.
+	RequestCheckCredential([in] Proud::Guid credential, [in] HostID userHostID, [in] String ServerName);
+	
+	NotifyCheckCredentialSuccess([in] Guid gamerGuid,[in] HostID userHostID);
+	NotifyCheckCredentialFail([in] HostID userHostID);
+	
+	UserLogOut([in] Guid gamerUUID);
+}

@@ -1,0 +1,360 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\ChatClient.rc2""  // Microsoft Visual C++￠?￠®¨u¡ⓒ ¨¡iAy￥iCAo ¨uEA¨￢ ￠￢￠c¨uO¨o¨￢\r\n"
+    "#include ""afxres.rc""         // C¡IA¨ª ¡¾￠￢¨u¨￢ ￠?a¨uO\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ChatClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ChatClient Information"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ChatClient Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_CHATCLIENT_DIALOG DIALOGEX 0, 0, 303, 256
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Chat 클라이언트"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "닫기",IDCANCEL,246,233,50,16
+    LISTBOX         IDC_CHAT_LOG,7,18,199,151,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CHAT_TEXT,7,235,181,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "보내기",IDC_SEND,191,235,50,14
+    LTEXT           "전체 채팅창",IDC_STATIC,7,7,38,8
+    LTEXT           "접속자 리스트",IDC_STATIC,211,7,44,8
+    PUSHBUTTON      "선택한 접속자들과\n P2P 채팅창 개설",IDC_CREATE_ROOM,210,172,86,25,BS_MULTILINE
+    CONTROL         "",IDC_UESR_LIST_CTL,"SysListView32",LVS_LIST | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,210,18,86,150
+    LTEXT           "통신 관련 메시지 창",IDC_STATIC,7,173,63,8
+    EDITTEXT        IDC_EDIT1,7,183,195,46,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+IDD_LOGON_DIALOG DIALOGEX 0, 0, 242, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "로그온"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDOK,185,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,24,50,14
+    LTEXT           "서버 주소",IDC_STATIC,7,7,35,8
+    LTEXT           "유저 이름",IDC_STATIC,7,42,48,8
+    EDITTEXT        IDC_SERVER_ADDR,7,18,147,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USER_NAME,7,56,147,14,ES_AUTOHSCROLL
+END
+
+IDD_CHAT_ROOM DIALOGEX 0, 0, 248, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "채팅방(P2P Group)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "닫기",IDCANCEL,207,137,34,14
+    LISTBOX         IDC_CHATLOG,7,7,139,122,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "보내기",IDC_SEND,154,137,50,14
+    EDITTEXT        IDC_CHAT_TEXT,7,137,139,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MEMBER_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,153,7,88,111
+    PUSHBUTTON      "Send &Big Data",IDC_SEND_BIG_DATA,153,121,88,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "Nettention Inc."
+            VALUE "FileDescription", "Chat Client"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GCClient.exe"
+            VALUE "LegalCopyright", "(c) Nettention Inc.  All rights reserved."
+            VALUE "OriginalFilename", "GCClient.exe"
+            VALUE "ProductName", "ProudNet"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "변환", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CHATCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        VERTGUIDE, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_LOGON_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        VERTGUIDE, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_CHAT_ROOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        VERTGUIDE, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "ChatClient 정보(&A)..."
+    IDS_STRING102           "잘못된 주소입니다."
+    IDS_STRING103           "서버 접속 실패"
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CHAT_ROOM DIALOGEX 0, 0, 248, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Chatting Room(P2P Group)"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,207,137,34,14
+    LISTBOX         IDC_CHATLOG,7,7,139,122,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Send",IDC_SEND,154,137,50,14
+    EDITTEXT        IDC_CHAT_TEXT,7,137,139,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MEMBER_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,153,7,88,110
+    PUSHBUTTON      "Send &Big Data",IDC_SEND_BIG_DATA,153,121,88,14
+END
+
+IDD_CHATCLIENT_DIALOG DIALOGEX 0, 0, 303, 256
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Chat Client"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,246,233,50,16
+    LISTBOX         IDC_CHAT_LOG,7,18,199,151,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CHAT_TEXT,7,235,181,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send",IDC_SEND,191,235,50,14
+    LTEXT           "Chatting Window",IDC_STATIC,7,7,55,8
+    LTEXT           "User List",IDC_STATIC,211,7,27,8
+    PUSHBUTTON      "Create P2P chatting room \nwith selected users",IDC_CREATE_ROOM,210,172,86,25,BS_MULTILINE
+    CONTROL         "",IDC_UESR_LIST_CTL,"SysListView32",LVS_LIST | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,210,18,86,150
+    LTEXT           "Message Log",IDC_STATIC,7,173,41,8
+    EDITTEXT        IDC_EDIT1,7,183,195,46,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+IDD_LOGON_DIALOG DIALOGEX 0, 0, 242, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Log on"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDOK,185,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,185,24,50,14
+    LTEXT           "Server Address",IDC_STATIC,7,7,50,8
+    LTEXT           "User Name",IDC_STATIC,7,42,48,8
+    EDITTEXT        IDC_SERVER_ADDR,7,18,147,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USER_NAME,7,56,147,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CHAT_ROOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        VERTGUIDE, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_CHATCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        VERTGUIDE, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_LOGON_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        VERTGUIDE, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "ChatClient information(&A)..."
+    IDS_STRING102           "Wrong server address"
+    IDS_STRING103           "Failed to connect server."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\ChatClient.rc2"  // Microsoft Visual C++￠?￠®¨u¡ⓒ ¨¡iAy￥iCAo ¨uEA¨￢ ￠￢￠c¨uO¨o¨￢
+#include "afxres.rc"         // C¡IA¨ª ¡¾￠￢¨u¨￢ ￠?a¨uO
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

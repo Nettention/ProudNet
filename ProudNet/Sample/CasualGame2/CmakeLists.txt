@@ -1,0 +1,14 @@
+cmake_minimum_required (VERSION 3.8.0)
+if(NOT WIN32)
+	message(ERROR_FATAL "[This sample supports only for windows.]")
+endif(NOT WIN32)
+set(CMAKE_SUPPRESS_REGENERATION true)
+
+#The name of the .sln file
+project (CasualGame2)
+
+#Adding VC Projects
+add_subdirectory(../../../DirectX/SampleCommon DXUtil)
+add_subdirectory(GCCommon)
+add_subdirectory(GCClient)
+add_subdirectory(GCServer)

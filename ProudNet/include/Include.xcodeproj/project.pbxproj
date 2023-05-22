@@ -1,0 +1,268 @@
+﻿// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		39399E241B2EFBDD00A660E7 /* pnguid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pnguid.h; sourceTree = "<group>"; };
+		395B54391D6EA4AC00E3D66E /* NetVariant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetVariant.h; sourceTree = "<group>"; };
+		395D4AEC1C771C5B005A473B /* PNCrc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNCrc.h; sourceTree = "<group>"; };
+		39AB2C0B19F7A67700C4AB56 /* pnmutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 2; path = pnmutex.h; sourceTree = "<group>"; };
+		39B8A2391982453200AA94AF /* ReceivedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceivedMessage.h; sourceTree = "<group>"; };
+		553A554F1560E4CB0034E84D /* atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atomic.h; sourceTree = "<group>"; };
+		558374A81550E897004A0674 /* Hla_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hla_C.h; sourceTree = "<group>"; };
+		558374A91550E897004A0674 /* HlaDelagate_Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HlaDelagate_Common.h; sourceTree = "<group>"; };
+		558374AA1550E897004A0674 /* HlaEntity_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HlaEntity_C.h; sourceTree = "<group>"; };
+		558374AB1550E897004A0674 /* HlaField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HlaField.h; sourceTree = "<group>"; };
+		558374AC1550E897004A0674 /* HlaHost_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HlaHost_C.h; sourceTree = "<group>"; };
+		55AC91F81585C07600CA95C9 /* TimeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
+		55B126F214B42BE600F77191 /* ConnectParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectParam.h; sourceTree = "<group>"; };
+		55B126F314B42BE600F77191 /* DumpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DumpClient.h; sourceTree = "<group>"; };
+		55B126F414B42BE600F77191 /* INetClientEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INetClientEvent.h; sourceTree = "<group>"; };
+		55B126F514B42BE600F77191 /* NetClientInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetClientInterface.h; sourceTree = "<group>"; };
+		55B126F614B42BE600F77191 /* ProudNetClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProudNetClient.h; sourceTree = "<group>"; };
+		55B126F714B42BFA00F77191 /* AddrPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddrPort.h; sourceTree = "<group>"; };
+		55B126FA14B42BFA00F77191 /* AngleFollower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AngleFollower.h; sourceTree = "<group>"; };
+		55B126FB14B42BFA00F77191 /* BasicTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicTypes.h; sourceTree = "<group>"; };
+		55B126FC14B42BFA00F77191 /* Behavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Behavior.h; sourceTree = "<group>"; };
+		55B126FE14B42BFA00F77191 /* CompressEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompressEnum.h; sourceTree = "<group>"; };
+		55B1270014B42BFA00F77191 /* CriticalSect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 2; path = CriticalSect.h; sourceTree = "<group>"; };
+		55B1270214B42BFA00F77191 /* CryptoAes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoAes.h; sourceTree = "<group>"; };
+		55B1270314B42BFA00F77191 /* CryptoRc4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoRc4.h; sourceTree = "<group>"; };
+		55B1270414B42BFA00F77191 /* CryptoRsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoRsa.h; sourceTree = "<group>"; };
+		55B1270F14B42BFA00F77191 /* dumpcommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dumpcommon.h; sourceTree = "<group>"; };
+		55B1271114B42BFA00F77191 /* EmergencyLogCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmergencyLogCommon.h; sourceTree = "<group>"; };
+		55B1271314B42BFA00F77191 /* EncryptEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptEnum.h; sourceTree = "<group>"; };
+		55B1271414B42BFA00F77191 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		55B1271514B42BFA00F77191 /* ErrorInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorInfo.h; sourceTree = "<group>"; };
+		55B1271614B42BFA00F77191 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		55B1271714B42BFA00F77191 /* Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		55B1271814B42BFA00F77191 /* ExternalBufferArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalBufferArray.h; sourceTree = "<group>"; };
+		55B1271914B42BFA00F77191 /* FakeClr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeClr.h; sourceTree = "<group>"; };
+		55B1271A14B42BFA00F77191 /* FakeCLRArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeCLRArray.h; sourceTree = "<group>"; };
+		55B1271B14B42BFA00F77191 /* FakeClrBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeClrBase.h; sourceTree = "<group>"; };
+		55B1271C14B42BFA00F77191 /* FakeCLRRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeCLRRandom.h; sourceTree = "<group>"; };
+		55B1271D14B42BFA00F77191 /* FastArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastArray.h; sourceTree = "<group>"; };
+		55B1271E14B42BFA00F77191 /* FastArrayPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastArrayPtr.h; sourceTree = "<group>"; };
+		55B1271F14B42BFA00F77191 /* FastColl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastColl.h; sourceTree = "<group>"; };
+		55B1272014B42BFA00F77191 /* FastHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastHeap.h; sourceTree = "<group>"; };
+		55B1272114B42BFA00F77191 /* FastHeapSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastHeapSettings.h; sourceTree = "<group>"; };
+		55B1272214B42BFA00F77191 /* FastList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastList.h; sourceTree = "<group>"; };
+		55B1272314B42BFA00F77191 /* FastMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastMap.h; sourceTree = "<group>"; };
+		55B1272414B42BFA00F77191 /* FastRefCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastRefCount.h; sourceTree = "<group>"; };
+		55B1272514B42BFA00F77191 /* FastSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastSet.h; sourceTree = "<group>"; };
+		55B1272614B42BFA00F77191 /* favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = favorite.h; sourceTree = "<group>"; };
+		55B1272714B42BFA00F77191 /* FixedLengthArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FixedLengthArray.h; sourceTree = "<group>"; };
+		55B1272914B42BFA00F77191 /* HlaDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HlaDef.h; sourceTree = "<group>"; };
+		55B1272B14B42BFA00F77191 /* HostIDArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostIDArray.h; sourceTree = "<group>"; };
+		55B1273714B42BFA00F77191 /* INetCoreEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INetCoreEvent.h; sourceTree = "<group>"; };
+		55B1273814B42BFA00F77191 /* INetServerEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INetServerEvent.h; sourceTree = "<group>"; };
+		55B1273914B42BFA00F77191 /* IRmiHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRmiHost.h; sourceTree = "<group>"; };
+		55B1273A14B42BFA00F77191 /* IRMIProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRMIProxy.h; sourceTree = "<group>"; };
+		55B1273B14B42BFA00F77191 /* IRMIStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRMIStub.h; sourceTree = "<group>"; };
+		55B1273D14B42BFA00F77191 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		55B1273E14B42BFA00F77191 /* LookasideAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookasideAllocator.h; sourceTree = "<group>"; };
+		55B1274014B42BFA00F77191 /* Marshaler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Marshaler.h; sourceTree = "<group>"; };
+		55B1274114B42BFA00F77191 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		55B1274214B42BFA00F77191 /* MessageSummary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSummary.h; sourceTree = "<group>"; };
+		55B1274414B42BFA00F77191 /* MilisecTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MilisecTimer.h; sourceTree = "<group>"; };
+		55B1274514B42BFA00F77191 /* MiniDumper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniDumper.h; sourceTree = "<group>"; };
+		55B1274914B42BFA00F77191 /* NetConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetConfig.h; sourceTree = "<group>"; };
+		55B1274A14B42BFA00F77191 /* NetPeerInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetPeerInfo.h; sourceTree = "<group>"; };
+		55B1274B14B42BFA00F77191 /* NetPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetPtr.h; sourceTree = "<group>"; };
+		55B1274E14B42BFA00F77191 /* numutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = numutil.h; sourceTree = "<group>"; };
+		55B1274F14B42BFA00F77191 /* P2PGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PGroup.h; sourceTree = "<group>"; };
+		55B1275014B42BFA00F77191 /* PNString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNString.h; sourceTree = "<group>"; };
+		55B1275114B42BFA00F77191 /* PnTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PnTime.h; sourceTree = "<group>"; };
+		55B1275214B42BFA00F77191 /* PositionFollower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionFollower.h; sourceTree = "<group>"; };
+		55B1275514B42BFA00F77191 /* ProudNetCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProudNetCommon.h; sourceTree = "<group>"; };
+		55B1275614B42BFA00F77191 /* ProudNetServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProudNetServer.h; sourceTree = "<group>"; };
+		55B1275714B42BFA00F77191 /* Ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ptr.h; sourceTree = "<group>"; };
+		55B1275814B42BFA00F77191 /* Quantizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quantizer.h; sourceTree = "<group>"; };
+		55B1275914B42BFA00F77191 /* quicksort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = quicksort.h; sourceTree = "<group>"; };
+		55B1275A14B42BFA00F77191 /* Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		55B1275C14B42BFA00F77191 /* ReceivedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceivedMessage.h; sourceTree = "<group>"; };
+		55B1275F14B42BFA00F77191 /* RMIContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMIContext.h; sourceTree = "<group>"; };
+		55B1276014B42BFA00F77191 /* Semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		55B1276114B42BFA00F77191 /* SendData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendData.h; sourceTree = "<group>"; };
+		55B1276314B42BFA00F77191 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		55B1276414B42BFA00F77191 /* SocketEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketEnum.h; sourceTree = "<group>"; };
+		55B1276514B42BFA00F77191 /* SocketInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketInterface.h; sourceTree = "<group>"; };
+		55B1276614B42BFA00F77191 /* STLMarshal.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = STLMarshal.inl; sourceTree = "<group>"; };
+		55B1276714B42BFA00F77191 /* strpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strpool.h; sourceTree = "<group>"; };
+		55B1276A14B42BFA00F77191 /* sysutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sysutil.h; sourceTree = "<group>"; };
+		55B1276D14B42BFA00F77191 /* TimerThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerThread.h; sourceTree = "<group>"; };
+		55B1276E14B42BFA00F77191 /* Tracer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracer.h; sourceTree = "<group>"; };
+		55B1276F14B42BFA00F77191 /* UnsafeMem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnsafeMem.h; sourceTree = "<group>"; };
+		55B1277114B42BFA00F77191 /* Vector3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3D.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		55AA106314B42212005131BC = {
+			isa = PBXGroup;
+			children = (
+				55B126F014B4227400F77191 /* Client */,
+				55B126EE14B4226D00F77191 /* Common */,
+			);
+			sourceTree = "<group>";
+		};
+		55B126EE14B4226D00F77191 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				395D4AEC1C771C5B005A473B /* PNCrc.h */,
+				39399E241B2EFBDD00A660E7 /* pnguid.h */,
+				39AB2C0B19F7A67700C4AB56 /* pnmutex.h */,
+				39B8A2391982453200AA94AF /* ReceivedMessage.h */,
+				55AC91F81585C07600CA95C9 /* TimeUtil.h */,
+				553A554F1560E4CB0034E84D /* atomic.h */,
+				558374A81550E897004A0674 /* Hla_C.h */,
+				558374A91550E897004A0674 /* HlaDelagate_Common.h */,
+				558374AA1550E897004A0674 /* HlaEntity_C.h */,
+				558374AB1550E897004A0674 /* HlaField.h */,
+				558374AC1550E897004A0674 /* HlaHost_C.h */,
+				55B126F714B42BFA00F77191 /* AddrPort.h */,
+				55B126FA14B42BFA00F77191 /* AngleFollower.h */,
+				55B126FB14B42BFA00F77191 /* BasicTypes.h */,
+				55B126FC14B42BFA00F77191 /* Behavior.h */,
+				55B126FE14B42BFA00F77191 /* CompressEnum.h */,
+				55B1270014B42BFA00F77191 /* CriticalSect.h */,
+				55B1270214B42BFA00F77191 /* CryptoAes.h */,
+				55B1270314B42BFA00F77191 /* CryptoRc4.h */,
+				55B1270414B42BFA00F77191 /* CryptoRsa.h */,
+				55B1270F14B42BFA00F77191 /* dumpcommon.h */,
+				55B1271114B42BFA00F77191 /* EmergencyLogCommon.h */,
+				55B1271314B42BFA00F77191 /* EncryptEnum.h */,
+				55B1271414B42BFA00F77191 /* Enums.h */,
+				55B1271514B42BFA00F77191 /* ErrorInfo.h */,
+				55B1271614B42BFA00F77191 /* Event.h */,
+				55B1271714B42BFA00F77191 /* Exception.h */,
+				55B1271814B42BFA00F77191 /* ExternalBufferArray.h */,
+				55B1271914B42BFA00F77191 /* FakeClr.h */,
+				55B1271A14B42BFA00F77191 /* FakeCLRArray.h */,
+				55B1271B14B42BFA00F77191 /* FakeClrBase.h */,
+				55B1271C14B42BFA00F77191 /* FakeCLRRandom.h */,
+				55B1271D14B42BFA00F77191 /* FastArray.h */,
+				55B1271E14B42BFA00F77191 /* FastArrayPtr.h */,
+				55B1271F14B42BFA00F77191 /* FastColl.h */,
+				55B1272014B42BFA00F77191 /* FastHeap.h */,
+				55B1272114B42BFA00F77191 /* FastHeapSettings.h */,
+				55B1272214B42BFA00F77191 /* FastList.h */,
+				55B1272314B42BFA00F77191 /* FastMap.h */,
+				55B1272414B42BFA00F77191 /* FastRefCount.h */,
+				55B1272514B42BFA00F77191 /* FastSet.h */,
+				55B1272614B42BFA00F77191 /* favorite.h */,
+				55B1272714B42BFA00F77191 /* FixedLengthArray.h */,
+				55B1272914B42BFA00F77191 /* HlaDef.h */,
+				55B1272B14B42BFA00F77191 /* HostIDArray.h */,
+				55B1273714B42BFA00F77191 /* INetCoreEvent.h */,
+				55B1273814B42BFA00F77191 /* INetServerEvent.h */,
+				55B1273914B42BFA00F77191 /* IRmiHost.h */,
+				55B1273A14B42BFA00F77191 /* IRMIProxy.h */,
+				55B1273B14B42BFA00F77191 /* IRMIStub.h */,
+				55B1273D14B42BFA00F77191 /* ListNode.h */,
+				55B1273E14B42BFA00F77191 /* LookasideAllocator.h */,
+				55B1274014B42BFA00F77191 /* Marshaler.h */,
+				55B1274114B42BFA00F77191 /* Message.h */,
+				55B1274214B42BFA00F77191 /* MessageSummary.h */,
+				55B1274414B42BFA00F77191 /* MilisecTimer.h */,
+				55B1274514B42BFA00F77191 /* MiniDumper.h */,
+				55B1274914B42BFA00F77191 /* NetConfig.h */,
+				55B1274A14B42BFA00F77191 /* NetPeerInfo.h */,
+				55B1274B14B42BFA00F77191 /* NetPtr.h */,
+				55B1274E14B42BFA00F77191 /* numutil.h */,
+				55B1274F14B42BFA00F77191 /* P2PGroup.h */,
+				55B1275014B42BFA00F77191 /* PNString.h */,
+				55B1275114B42BFA00F77191 /* PnTime.h */,
+				55B1275214B42BFA00F77191 /* PositionFollower.h */,
+				55B1275514B42BFA00F77191 /* ProudNetCommon.h */,
+				55B1275614B42BFA00F77191 /* ProudNetServer.h */,
+				55B1275714B42BFA00F77191 /* Ptr.h */,
+				55B1275814B42BFA00F77191 /* Quantizer.h */,
+				55B1275914B42BFA00F77191 /* quicksort.h */,
+				55B1275A14B42BFA00F77191 /* Random.h */,
+				55B1275C14B42BFA00F77191 /* ReceivedMessage.h */,
+				55B1275F14B42BFA00F77191 /* RMIContext.h */,
+				55B1276014B42BFA00F77191 /* Semaphore.h */,
+				55B1276114B42BFA00F77191 /* SendData.h */,
+				55B1276314B42BFA00F77191 /* Singleton.h */,
+				55B1276414B42BFA00F77191 /* SocketEnum.h */,
+				55B1276514B42BFA00F77191 /* SocketInterface.h */,
+				55B1276614B42BFA00F77191 /* STLMarshal.inl */,
+				55B1276714B42BFA00F77191 /* strpool.h */,
+				55B1276A14B42BFA00F77191 /* sysutil.h */,
+				55B1276D14B42BFA00F77191 /* TimerThread.h */,
+				55B1276E14B42BFA00F77191 /* Tracer.h */,
+				55B1276F14B42BFA00F77191 /* UnsafeMem.h */,
+				55B1277114B42BFA00F77191 /* Vector3D.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		55B126F014B4227400F77191 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				395B54391D6EA4AC00E3D66E /* NetVariant.h */,
+				55B126F214B42BE600F77191 /* ConnectParam.h */,
+				55B126F314B42BE600F77191 /* DumpClient.h */,
+				55B126F414B42BE600F77191 /* INetClientEvent.h */,
+				55B126F514B42BE600F77191 /* NetClientInterface.h */,
+				55B126F614B42BE600F77191 /* ProudNetClient.h */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		55AA106514B42212005131BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 55AA106814B42212005131BC /* Build configuration list for PBXProject "Include" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55AA106314B42212005131BC;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		55AA106A14B42212005131BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		55AA106B14B42212005131BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55AA106814B42212005131BC /* Build configuration list for PBXProject "Include" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AA106A14B42212005131BC /* Debug */,
+				55AA106B14B42212005131BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55AA106514B42212005131BC /* Project object */;
+}

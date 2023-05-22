@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\GCServer.rc2""  // Microsoft Visual C++???? ?iAyレCAo ?EAi ?三?O?i\r\n"
+    "#include ""afxres.rc""         // C⊥Ai 【??i ?a?O\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GCServer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GCServer Information"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GCServer Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_GCSERVER_DIALOG DIALOGEX 0, 0, 299, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ProudNet Casual Game Server Sample"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop Server",IDOK,242,7,50,16
+    CONTROL         "",IDC_SERVER_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,230,101
+    EDITTEXT        IDC_EDIT1,7,114,285,65,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "Nettention Inc."
+            VALUE "FileDescription", "Casual Game Sample Server"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GCClient.exe"
+            VALUE "LegalCopyright", "(c) Nettention Inc.  All rights reserved."
+            VALUE "OriginalFilename", "GCClient.exe"
+            VALUE "ProductName", "ProudNet"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "변환", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_GCSERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "GCServer 정보(&A)..."
+    IDS_STRING102           "정상 작동 중"
+    IDS_STRING103           "독점권이 제대로 넘어가지 않습니다."
+    IDS_STRING104           "UpdateData 실패. 이유:%s 코멘트:%s"
+    IDS_STRING105           "Mission이 클리어되었습니다. Room : %s"
+    IDS_STRING106           "서버 시작을 준비중입니다..."
+    IDS_STRING107           "DB cache server 시작 중 예외 발생: %s"
+    IDS_STRING108           "AddData실패 이유 :%s"
+    IDS_STRING109           "대기표가 같지 않습니다. 설정이 잘못되었거나 서버 오류입니다."
+    IDS_STRING110           "실패"
+    IDS_STRING111           "Farm Server에 연결을 시도한다."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "Room GUID는 이 함수가 호출되기 전에 정의되어 있어야 합니다!"
+    IDS_STRING113           "Room guid 는 JoinGameRoomByLobbyServer가 호출되기 전에 정의되어 있어야 합니다!"
+    IDS_STRING114           "로드된 Data에 문제가 있습니다."
+    IDS_STRING115           "Farm Server 연결에 실패하였습니다."
+    IDS_STRING116           "Farm Server 연결에 성공하였습니다."
+    IDS_STRING117           "Battle Server가 없습니다."
+    IDS_STRING118           "접속자 수"
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "GCServer information(&A)..."
+    IDS_STRING102           "Working"
+    IDS_STRING103           "Exclusive right has not passed correctly"
+    IDS_STRING104           "UpdateData is failed. Reason:%s Comment: %s"
+    IDS_STRING105           "Mission Clear. Room: %s"
+    IDS_STRING106           "Prepare to start server"
+    IDS_STRING107           "Unexpected error occur during start up DB cache server: %s"
+    IDS_STRING108           "AddData is failed. Reason: %s"
+    IDS_STRING109           "Wrong que. Wrong setting or Server Error"
+    IDS_STRING110           "failed"
+    IDS_STRING111           "Connecting farm server..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "Room guid must be defined before calling this function!"
+    IDS_STRING113           "Room guid must be defined before calling JoinGameRoomByLobbyServer!"
+    IDS_STRING114           "Loaded Data has some Problem"
+    IDS_STRING115           "Failed to connect Farm server"
+    IDS_STRING116           "Succeed to connect Farm Server"
+    IDS_STRING117           "Battle server is not currently running!"
+    IDS_STRING118           "User Count"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\GCServer.rc2"  // Microsoft Visual C++???? ?iAyレCAo ?EAi ?三?O?i
+#include "afxres.rc"         // C⊥Ai 【??i ?a?O
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

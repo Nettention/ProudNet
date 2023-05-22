@@ -1,0 +1,31 @@
+﻿package com.nettention.sample;
+import(java) com.nettention.proud.HostIDArray;
+
+rename java(Proud::String, String);
+rename java(Proud::HostIDArray, HostIDArray);
+rename java(Proud::HostID, int);
+rename java(Proud::ByteArray, ByteArray);
+
+rename cs(Proud::String, System.String);
+rename cs(Proud::HostIDArray, Nettention.Proud.HostIDArray);
+rename cs(Proud::HostID, Nettention.Proud.HostID);
+rename cs(Proud::ByteArray, Nettention.Proud.ByteArray);
+
+global ChatC2S 4000
+{
+	// 서버에 로그온을 요청합니다.
+	//
+	RequestLogon([in] Proud::String userName);
+	
+	// 서버에 채팅을 보냅니다(서버에서는 브로드캐스트 합니다.)
+	//
+	Chat([in] Proud::String text);
+	
+	// 서버에 P2P 그룹 생성을 요청합니다.
+	//
+	RequestP2PGroup([in] Proud::HostIDArray groupMemberList);
+	
+	// 서버에 연결된 P2P 그룹에서 나가기를 요청합니다.
+	//
+	RequestLeaveP2PGroup([in] Proud::HostID groupID);
+}

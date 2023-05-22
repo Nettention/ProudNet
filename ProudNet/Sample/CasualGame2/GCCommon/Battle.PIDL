@@ -1,0 +1,173 @@
+// RMI receive/send between battle server and client
+// 배틀 서버와 클라이언트간 주고받는 RMI
+global BattleC2S 5000
+{
+	// encrypted : Previous step, logon to battle server that based on logon authentication information (credential) receiving from server.
+	// encrypted : 앞 과정, 즉 로비 서버에서 받은 로그온 인증 정보(credential)을 기반으로 배틀 서버에 로그온한다.
+	RequestNextLogon([in] Guid roomGuid, [in] Guid credential);
+
+	// If game is not room master then game play is "READY" to server at game waiting room
+	// It designed request-confirm type for correct synchronization.
+	// 게임방 대기실에서, 게이머가 방장이 아닌 경우 게임 플레이가 '준비됐음을' 
+	// 서버에 노티한다.
+	// 동기화를 정확히 하기 위해 request-confirm 형태로 설계되었다.
+	RequestToggleBattleReady();
+
+	// Start play request of game room that in standby mode.
+	// It is only available for room master.
+	// 대기모드인 게임방의 플레이를 시작 요청을 한다.
+	// 방장만 가능한 요청이다.
+	RequestStartPlayMode();
+
+	// Once it finished loading for play mode then sends this to server.
+	// 플레이 모드를 위한 로딩이 완료되면 서버에 이걸 보내야 한다.
+	NotifyLoadFinished();
+	
+
+	/* Request 'Return to waiting room!' to server.*/
+	/* '대기실로 돌아가라!'를 서버에 요청한다.*/
+	LeaveBattleRoom();
+	
+	// Report message that ready for connecting with server and game play and set fist starting position then send it to server.
+	// heroName: Character name
+	// position: Position
+	// yaw: Direction
+	
+	// 클라에서, 서버와의 연결 시도 및 게임 플레이 준비가 되었고, 최초의 시작 위치를 설정한 후
+	// 서버에 보내는 신고 메시지
+	// heroName: 캐릭터 이름
+	// position: 위치
+	// yaw: 방향	
+	RequestLocalHeroSpawn([in] CStringW heroName,[in]D3DXVECTOR3 position, [in]float yaw);
+	RequestBulletSpawn();
+	
+	LocalHero_Move([in] D3DXVECTOR3 position,[in] D3DXVECTOR3 velocity,[in] float yaw);
+
+	//// Received notice that client has moved to lobby server during game.
+	////게임중 클라가 로비서버로 이동했음을 노티받는다.
+	NotifyGotoLobbyServer();
+}
+
+// RMI receive/send between battle server and client
+// 배틀 서버와 클라이언트간 주고받는 RMI
+global BattleS2C 6000
+{
+	// This warning message send from server when it receive RMI request that has to logon first without logon.
+	// 로그온하지 않은 채로 로그온이 선결되어야 하는 RMI 요청을 받으면 서버에서 보내는 경고 메시지다.
+	NotifyUnauthedAccess();
+
+	// It is error message that send to client when server occurs unexpacted error.
+	// 서버에서 비의도된 에러가 발생하면 클라에게 보내주는 에러 메시지다.
+	ShowError([in] String errTxt);	
+	
+	// Receiving message to client when it failed to logon process
+	// 로그온 과정이 실패시 클라가 메시지
+	NotifyNextLogonFailed([in] ErrorType reason,[in] CasualResult moreReason);
+
+	// Receiving message to client when it succeed to logon process. It includes credential. 
+	// 로그온 성공시 클라가 받는 메시지. credential이 포함된다. 
+	NotifyNextLogonSuccess([in] Guid Gamerguid,[in] CHeroPublishInfo selectedHeroInfo);
+
+	// Message that add copy of itself or other player character information to client.
+	// 자신 또는 타 플레이어 캐릭터 정보의 사본을 클라이언트에 추가하는 메시지
+	HeroSlot_Appear([in] CHeroPublishInfo heroInfo,[in] HostID clientHostID);
+	
+	// Message that remove copy of itself or other player character information from client
+	// 자신 또는 타 플레이어 캐릭터 정보의 사본을 클라이언트에서 제거하는 메시지
+	HeroSlot_Disappear([in] Guid heroGuid);
+	
+	// Message that change copy of itself or other player character information
+	// 자신 또는 타 플레이어 캐릭터 정보의 사본이 변경되는 메시지
+	HeroSlot_ShowState([in] CHeroPublishInfo heroInfo);
+
+	// Client received message when it change information of joined game room	
+	// 클라가 접속해 있는 게임방의 정보에 변화가 있을 때 클라가 받는 메시지	
+	NotifyGameRoomInfo([in] CGameRoomParameter info);
+
+	// Client received message when it failed to request server about 'Start Play Mode' to client, if client is room master.
+	// 이 클라가 방장인 경우, 서버에 '플레이 모드 시작' 요청을 한 것이 실패하면 클라가 받는 메시지
+	NotifyStartPlayModeFailed();
+
+	// Forced change to waiting room mode for client.
+	// Client receives this message when it stopped play mode such as mission clear.
+	// 클라를 강제로 대기실 모드로 전환하게 한다.
+	// 미션 클리어 등 플레이 모드가 중지되면 클라가 받는 메시지다.
+	GotoWaitingMode();
+
+	// Game play has decided so order to load process for game play.
+	// 게임 플레이 시작이 결정됐으므로, 게임 플레이를 위한 로딩 과정을 시작함을 지시한다.
+	GotoLoadingMode();
+
+	// Make it starts actual game play mode. 
+	// 실제 게임 플레이 모드를 시작하게 한다. 
+	GotoPlayMode();
+	
+	
+	//=======================================
+	// Notify ID of P2P group that point other clients who watching local character of client.
+	// 클라의 로컬 캐릭을 가시하는 타 클라들을 가리키는 P2P group의 ID를 노티한다.
+	NotifyLocalHeroViewersGroupID([in] HostID localHeroViewersGroupID);
+	
+	// Report about remote character has appeared
+	// heroOwnerID: HostId of client who control character
+	// heroName: Name of character
+	// position: Position of character
+	// velocity: Direction
+	// yaw: Direction that character is watching
+
+	// 원격 캐릭이 등장했다는 신고
+	// heroOwnerID: 캐릭터를 조종하는 클라이언트의 HostID
+	// heroName: 캐릭터의 이름
+	// position 캐릭터의 위치
+	// velocity 캐릭터가 이동하는 속도
+	// yaw 캐릭터가 바라보는 방향
+	RemoteHero_Appear([in] HostID heroOwnerID,[in] CStringW heroName,[in] D3DXVECTOR3 position,[in] D3DXVECTOR3 velocity,[in] float yaw);
+	
+	// Report destroying of remote character
+	// heroOwnerID: Client ID that control disappearing character
+	// 원격 캐릭의 소멸을 신고
+	// heroOwnerID 소멸하는 캐릭터를 조종하는 클라이언트의 ID
+	RemoteHero_Disappear([in] HostID heroOwnerID);
+	
+	
+	// Notify bullet creation to client.
+	//클라에게 bullet생성을 알린다.
+	NotifyBullet_Create([in] int id,[in] DirectionState state,[in] float direction, [in] D3DXVECTOR3 position,[in] D3DXVECTOR3 velocity);
+	// Notify bullet movement (position information) to client.
+	//클라에게 bullet움직임(위치정보)을 알린다.
+	NotifyBullet_Move([in] int id, [in] float speed,[in] float direction,[in] D3DXVECTOR3 position, [in] D3DXVECTOR3 velocity);
+	// Notify bullet removal to client.
+	//클라에게 bullet삭제를 알린다.
+	NotifyBullet_Delete([in] int id);
+	
+	NotifyHeroScore([in] LONGLONG score);
+	NotyfyGotoLobby();
+	
+	// Notify Item creation to client.
+	//클라에게 Item생성을 알린다.
+	NotifyItem_Create([in] int id, [in] D3DXVECTOR3 position,[in] ItemType type);
+	
+	// Notify item removal to client. Delete it at client.
+	//클라에게 Item삭제를 알린다.클라에서도 마찬가지로 지운다.
+	NotifyItem_Delete([in]int id);
+	// Notify clearing bullet to client.
+	//클라에게 총알을 모두 삭제를 알린다.
+	NotifyBullet_Clear();
+
+}
+
+// RMI that send/receive between battle clients
+// 배틀 클라이언트간 주고받는 RMI
+global BattleC2C 7000
+{
+	// Chatting string that send/receive between battle clients
+	// 배틀 클라이언트끼리 주고 받는 채팅 문자열
+	P2P_Chat([in] CStringW chatText);
+
+	// Sends via P2P to other client who position and speed of local character, watching local character.
+	// position: Position, velocity: Speed, yaw: Watching directiong of character
+	// 로컬 캐릭터의 위치와 속도를, 로컬 캐릭터를 가시하는 다른 클라이언트들에게 P2P 로 전송한다.
+	// position: 위치, velocity: 속도, yaw: 캐릭터가 바라보는 방향
+	P2P_LocalHero_Move([in] D3DXVECTOR3 position,[in] D3DXVECTOR3 velocity,[in] float yaw);
+}
+
