@@ -760,13 +760,13 @@ namespace Proud
 		서버와의 연결이 끊어져서 연결 복구 기능이 가동되었지만, 이것 마저도 실패했습니다.
 
 		\~english 
-		서버와의 연결이 끊어져서 연결 복구 기능이 가동되었지만, 이것 마저도 실패했습니다.
+		The connection recovery function attempted to activate but failed.
 
 		\~chinese
-		서버와의 연결이 끊어져서 연결 복구 기능이 가동되었지만, 이것 마저도 실패했습니다.
+		The connection recovery function attempted to activate but failed.
 
 		\~japanese
-		서버와의 연결이 끊어져서 연결 복구 기능이 가동되었지만, 이것 마저도 실패했습니다.
+		The connection recovery function attempted to activate but failed.
 		\~
 		*/
 		AutoConnectionRecoveryFailed = 49,
@@ -775,16 +775,61 @@ namespace Proud
 		RMI 함수를 호출 했지만, 함수 구현부가 없습니다.
 
 		\~english 
-		RMI 함수를 호출 했지만, 함수 구현부가 없습니다.
+		Could not call the RMI method without implementation for the function.
 
 		\~chinese
-		RMI 함수를 호출 했지만, 함수 구현부가 없습니다.
+		Could not call the RMI method without implementation for the function.
 
 		\~japanese
-		RMI 함수를 호출 했지만, 함수 구현부가 없습니다.
+		Could not call the RMI method without implementation for the function.
 		\~
 		*/
 		NotImplementedRmi = 50,
+			/**
+		\~korean
+		Rmi 함수 호출 중 서버와의 연결이 끊어져 있을 때 발생합니다.
+
+		\~english 
+		Occurs when the connection to the server is lost while calling the Rmi function.
+
+		\~chinese
+		Occurs when the connection to the server is lost while calling the Rmi function.
+
+		\~japanese
+		Occurs when the connection to the server is lost while calling the Rmi function.
+		\~
+		*/
+		ServerConnectionLostDuringRmi = 51,
+			/**
+		\~korean
+		서버에 연결하는 동안 Rmi 함수 호출
+
+		\~english 
+		Calling Rmi function while connecting to server.
+
+		\~chinese
+		Calling Rmi function while connecting to server.
+
+		\~japanese
+		Calling Rmi function while connecting to server.
+		\~
+		*/
+		RmiWhileConnectingToServer = 52,
+			/**
+		\~korean
+		서버 연결이 끊어진 동안 Rmi 함수 호출.
+
+		\~english 
+		Calling the Rmi function while disconnected from server.
+
+		\~chinese
+		Calling the Rmi function while disconnected from server.
+
+		\~japanese
+		Calling the Rmi function while disconnected from server.
+		\~
+		*/
+		RmiWhileDisconnectedServer = 53,
 		};
 
 	// 하위 호환성 혹은 프라우드넷 내부에서 사용합니다.
@@ -839,4 +884,7 @@ namespace Proud
 		#define ErrorType_OutOfMemory (ErrorType::OutOfMemory) 
 		#define ErrorType_AutoConnectionRecoveryFailed (ErrorType::AutoConnectionRecoveryFailed) 
 		#define ErrorType_NotImplementedRmi (ErrorType::NotImplementedRmi) 
+		#define ErrorType_ServerConnectionLostDuringRmi (ErrorType::ServerConnectionLostDuringRmi) 
+		#define ErrorType_RmiWhileConnectingToServer (ErrorType::RmiWhileConnectingToServer) 
+		#define ErrorType_RmiWhileDisconnectedServer (ErrorType::RmiWhileDisconnectedServer) 
 	}

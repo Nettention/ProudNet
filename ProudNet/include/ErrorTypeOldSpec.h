@@ -57,6 +57,9 @@ namespace Proud
 			ErrorType_OutOfMemory = 48,
 			ErrorType_AutoConnectionRecoveryFailed = 49,
 			ErrorType_NotImplementedRmi = 50,
+			ErrorType_ServerConnectionLostDuringRmi = 51,
+			ErrorType_RmiWhileConnectingToServer = 52,
+			ErrorType_RmiWhileDisconnectedServer = 53,
 		};
 }
  
