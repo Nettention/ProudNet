@@ -1,5 +1,6 @@
-﻿/*
-ProudNet 1.8.58849-master
+﻿/* 106 228 203 199 203 251 69 164 171 249 223 147 102 233 72 249 25 46 47 89 4 75 193 225 174 157 207 5 225 93 96 137 109 76  */
+/*
+ProudNet 1.8.58878-master
 
 
 이 프로그램의 저작권은 넷텐션에게 있습니다.
@@ -577,6 +578,18 @@ namespace Proud
 		*/
 		 PROUD_API static RmiContext FastEncryptedReliableSend;
 
+         /**
+         \~korean
+         EM_SumCheck모드로 단순하게 데이터 변조만 체크하여 Reliable message로 RMI 호출시 이것을 파라메터로 넣으면 된다.
+         - 기타 사항은 ReliableSend와 같습니다.
+
+         \~english
+         Simply check data modulation in EM_SumCheck mode and enter this as a parameter when calling RMI with a reliable message.
+         - All other details are same as ReliableSend.
+
+         */
+         PROUD_API static RmiContext CheckSumEncryptedReliableSend;
+
 		/**
 		\~korean
 		EM_Secure 모드로 암호화 하여 Reliable message로 RMI 호출시 이것을 파라메터로 넣으면 된다.
@@ -664,6 +677,19 @@ namespace Proud
 		\~
 		*/
 		 PROUD_API static RmiContext FastEncryptedUnreliableSend;
+
+
+         /**
+        \~korean
+        EM_SumCheck모드로 단순하게 데이터 변조만 체크하여 Unreliable message로 RMI 호출시 이것을 파라메터로 넣으면 된다.
+        - 기타 사항은 UnreliableSend와 같습니다.
+
+        \~english
+        Simply check data modulation in EM_SumCheck mode and enter this as a parameter when calling RMI with a unreliable message.
+        - All other details are same as ReliableSend.
+
+        */
+         PROUD_API static RmiContext CheckSumEncryptedUnreliableSend;
 
 
 		/**

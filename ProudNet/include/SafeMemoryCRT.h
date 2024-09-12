@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿/* 106 228 203 199 203 251 69 164 171 249 223 147 102 233 72 249 25 46 47 89 4 75 193 225 174 157 207 5 225 93 96 137 109 76  */
+#pragma once
 
 #ifdef _WIN32
 #error This header file is NOT for Win32 platform
@@ -10,7 +11,7 @@
 
 namespace Proud
 {
-#ifndef __ORBIS__ // PS4 플랫폼은 해당 플랫폼이 지원하는 memcpy_s를 사용하도록 함.
+#if !defined(__ORBIS__) && !defined(__PROSPERO__) // PS4 플랫폼은 해당 플랫폼이 지원하는 memcpy_s를 사용하도록 함.
 	// ikpil.choi, 2016-12-28 : memcpy_s 안전성 보강
 	inline errno_t memcpy_s(void *dest, size_t dest_size, const void* src, size_t src_size)
 	{

@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿/* 106 228 203 199 203 251 69 164 171 249 223 147 102 233 72 249 25 46 47 89 4 75 193 225 174 157 207 5 225 93 96 137 109 76  */
+#pragma once
 
 #ifdef _MSC_VER
 #pragma pack(push,8)
@@ -12,7 +13,7 @@
 
 // Windows SDK와 Playstation SDK는 iconv가 기본 제공되지 않는다.
 // TODO: tiniconv로 갈아탈까?
-#if defined _WIN32 || defined __ORBIS__ || defined __ANDROID__  // NOTE: ProudNet_android.vcxproj에서는 NDK 내 iconv를 찾을 수 없음.
+#if defined _WIN32 || defined __ORBIS__ || defined __ANDROID__ || defined(__PROSPERO__)// NOTE: ProudNet_android.vcxproj에서는 NDK 내 iconv를 찾을 수 없음.
 #	define PROUDNET_HAS_ICONV
 #endif
 
@@ -47,7 +48,7 @@
 #endif
 
 // 스레드,핸들 등 커널 리소스 수가 제법 제약되는 플랫폼
-#if defined(__ANDROID__) || defined(TARGET_OS_IPHONE) || defined(__ORBIS__)
+#if defined(__ANDROID__) || defined(TARGET_OS_IPHONE) || defined(__ORBIS__) || defined(__PROSPERO__)
 #define KERNEL_RESOURCE_SHORTAGE
 #endif
 

@@ -1001,7 +1001,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntArray_Get(void * jarg1, int jarg2) {
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -1277,7 +1277,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddrPortArray_Get(void * jarg1, int jarg2) 
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -1663,7 +1663,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetConnectionParam_SetExternalUserWorkerThrea
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -1689,7 +1689,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NetConnectionParam_SetExternalNetWorkerThread
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -2105,7 +2105,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ErrorInfo_CopyFromNative(void * jarg1, void *
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -2131,7 +2131,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ErrorInfo_GetNativeReceivedMessage(void * j
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -2159,7 +2159,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ErrorInfo_GetNativeReceivedMessageLength(void 
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -3243,7 +3243,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_DisconnectAsync(void * jarg1)
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -3271,7 +3271,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NativeNetClient_Connect__SWIG_0(void 
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -3321,7 +3321,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_FrameMove__SWIG_0(void * jarg
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -3349,7 +3349,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_FrameMove__SWIG_1(void * jarg
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -3589,7 +3589,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_SetEventSink(void * jarg1, vo
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -3615,7 +3615,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_AttachProxy(void * jarg1, voi
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -3641,7 +3641,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NativeNetClient_AttachStub(void * jarg1, void
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return ; 
       }
       
@@ -5812,7 +5812,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_NativeNetUtil_GetLocalIPAddresseCount(void * j
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -5842,7 +5842,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_NativeNetUtil_GetLocalIPAddress(void * jarg
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -5962,7 +5962,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_NativeHostIDArray_at(void * jarg1, int jarg2) 
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -6949,6 +6949,42 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_NativeRmiContext__SWIG_2(int jarg1, int
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_NativeRmiContext_CheckSumEncryptedReliableSend_set(void * jarg1) {
+  Proud::RmiContext *arg1 = (Proud::RmiContext *) 0 ;
+  
+  arg1 = (Proud::RmiContext *)jarg1; 
+  Proud::RmiContext::CheckSumEncryptedReliableSend = *arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NativeRmiContext_CheckSumEncryptedReliableSend_get() {
+  void * jresult ;
+  Proud::RmiContext *result = 0 ;
+  
+  result = (Proud::RmiContext *)&Proud::RmiContext::CheckSumEncryptedReliableSend;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NativeRmiContext_CheckSumEncryptedUnreliableSend_set(void * jarg1) {
+  Proud::RmiContext *arg1 = (Proud::RmiContext *) 0 ;
+  
+  arg1 = (Proud::RmiContext *)jarg1; 
+  Proud::RmiContext::CheckSumEncryptedUnreliableSend = *arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NativeRmiContext_CheckSumEncryptedUnreliableSend_get() {
+  void * jresult ;
+  Proud::RmiContext *result = 0 ;
+  
+  result = (Proud::RmiContext *)&Proud::RmiContext::CheckSumEncryptedUnreliableSend;
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_delete_NativeRmiContext(void * jarg1) {
   Proud::RmiContext *arg1 = (Proud::RmiContext *) 0 ;
   
@@ -7241,7 +7277,7 @@ SWIGEXPORT unsigned char SWIGSTDCALL CSharp_NativeByteArray_At(void * jarg1, int
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       
@@ -10281,7 +10317,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_NativeThreadPool_Create(int jarg1) {
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
         return 0; 
       }
       

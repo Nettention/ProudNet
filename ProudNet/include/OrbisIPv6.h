@@ -1,5 +1,6 @@
-﻿/*
-ProudNet 1.8.58849-master
+﻿/* 106 228 203 199 203 251 69 164 171 249 223 147 102 233 72 249 25 46 47 89 4 75 193 225 174 157 207 5 225 93 96 137 109 76  */
+/*
+ProudNet 1.8.58878-master
 
 이 프로그램의 저작권은 넷텐션에게 있습니다.
 이 프로그램의 수정, 사용, 배포에 관련된 사항은 본 프로그램의 소유권자와의 계약을 따르며,
@@ -38,7 +39,7 @@ define과 struct가 지원되지 않아, 컴파일이 정상적으로 되도록
 
 #pragma once
 
-#ifdef __ORBIS__
+#if defined(__ORBIS__) || defined(__PROSPERO__)
 
 #define IPPROTO_IPV6		41	// IPv6 header
 
