@@ -1001,7 +1001,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_IntArray_Get(void * jarg1, int jarg2) {
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
         return 0; 
       }
       
@@ -1277,7 +1277,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_AddrPortArray_Get(void * jarg1, int jarg2) 
       }
       catch(Proud::Exception &_e) {
         (void)_e;
-        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, (std::string("C++ Proud::Exception exception thrown : ") + (&_e)->chMsg.c_str()).c_str() );
+        SWIG_CSharpSetPendingException(SWIG_CSharpApplicationException, "C++ Proud::Exception exception thrown");
         return 0; 
       }
       
