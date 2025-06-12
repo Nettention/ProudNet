@@ -32,6 +32,7 @@ else(MSVC)#Setting about None-Windows
 #		${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/x86_x64-linux/Release/libProudNetServer.so
 #		${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/x86_x64-linux/Release/libProudNetClient.so
 		${CMAKE_CURRENT_SOURCE_DIR}/../../bin/libSimpleCommon.a
+		curl
 		ssl
 		crypto
 		odbc

@@ -57,8 +57,8 @@ namespace Nettention.Proud
         internal NoRmiProcessedDelegate noRmiProcessedHandler = null;
         public NoRmiProcessedDelegate NoRmiProcessedHandler { set { noRmiProcessedHandler = value; } }
 
-        internal ReceiveUserMessageDelegate receiveUserMessageHandler = null;
-        public ReceiveUserMessageDelegate ReceiveUserMessageHandler { set { receiveUserMessageHandler = value; } }
+        internal ReceiveUserMessageDelegate receivedUserMessageHandler = null;
+        public ReceiveUserMessageDelegate ReceivedUserMessageHandler { set { receivedUserMessageHandler = value; } }
 
 
         internal ErrorInfoDelegate errorHandler = null;
@@ -273,9 +273,9 @@ namespace Nettention.Proud
                         }
                         break;
                     case CallbackType.ReceiveUserMessage:
-                        if (receiveUserMessageHandler != null)
+                        if (receivedUserMessageHandler != null)
                         {
-                            receiveUserMessageHandler(evt.sender, evt.rmiContext, evt.byteArr);
+                            receivedUserMessageHandler(evt.sender, evt.rmiContext, evt.byteArr);
                             frameMoveResult.processedMessageCount++;
                         }
                         break;
