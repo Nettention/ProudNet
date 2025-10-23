@@ -1,15 +1,15 @@
-// UTF8·Î ÀúÀåÇÏÁö ¸¶¼¼¿ä. Unity Editor¿¡¼­ WebGL Build ¸í·É ½ÇÇà Áß¿¡ "cp-949 decode" ¾îÂ¼°í ³»ºÎ ¿¡·¯°¡ ¹ß»ıÇØ¹ö¸³´Ï´Ù. À¯´ÏÆ¼Ãø¿¡ ¿¡·¯ Çö»óÀ» Á¦º¸ÇØÁÖ¼¼¿ä.
+ï»¿// UTF8ë¡œ ì €ì¥í•˜ì§€ ë§ˆì„¸ìš”. Unity Editorì—ì„œ WebGL Build ëª…ë ¹ ì‹¤í–‰ ì¤‘ì— "cp-949 decode" ì–´ì©Œê³  ë‚´ë¶€ ì—ëŸ¬ê°€ ë°œìƒí•´ë²„ë¦½ë‹ˆë‹¤. ìœ ë‹ˆí‹°ì¸¡ì— ì—ëŸ¬ í˜„ìƒì„ ì œë³´í•´ì£¼ì„¸ìš”.
 
 var WebGL = {
-	// enableLog¸¦ true·Î º¯°æÇÏ¸é JS´ÜÀÇ °³·«ÀûÀÎ ·Î±×¸¦ È®ÀÎ °¡´É. writeLog¸¦ »ç¿ëÇÏ¿© »ç¿ëÀÚÀÇ ·Î±×µµ Ãß°¡ °¡´É.
-	// setEnv´Â ÃÖÃÊ false, prototype Á¤ÀÇ ÈÄ true. functionÀ» ÀçÁ¤ÀÇ ÇÏÁö ¾Ê°í »ç¿ëÇÏ±â À§ÇØ prototype¿¡ Á¤ÀÇÇÑ °ÍÀÓ. »ç¿ëÀÚ´Â ÀÌ°ªÀ» ¼Õ´ëÁö ¸¶¼¼¿ä. ÆÛÆ÷¸Õ½º ÀúÇÏ·Î ÀÌ¾îÁı´Ï´Ù.
-	// internalVersionÀº ÇÁ¶ó¿ìµå³İ ³»ºÎ ¹öÀüÁ¤º¸. C#ÂÊ¿¡¼­ ³Ñ¾î¿À´Â °ªÀ¸·Î ¼³Á¤µÈ´Ù.
+	// enableLogë¥¼ trueë¡œ ë³€ê²½í•˜ë©´ JSë‹¨ì˜ ê°œëµì ì¸ ë¡œê·¸ë¥¼ í™•ì¸ ê°€ëŠ¥. writeLogë¥¼ ì‚¬ìš©í•˜ì—¬ ì‚¬ìš©ìì˜ ë¡œê·¸ë„ ì¶”ê°€ ê°€ëŠ¥.
+	// setEnvëŠ” ìµœì´ˆ false, prototype ì •ì˜ í›„ true. functionì„ ì¬ì •ì˜ í•˜ì§€ ì•Šê³  ì‚¬ìš©í•˜ê¸° ìœ„í•´ prototypeì— ì •ì˜í•œ ê²ƒì„. ì‚¬ìš©ìëŠ” ì´ê°’ì„ ì†ëŒ€ì§€ ë§ˆì„¸ìš”. í¼í¬ë¨¼ìŠ¤ ì €í•˜ë¡œ ì´ì–´ì§‘ë‹ˆë‹¤.
+	// internalVersionì€ í”„ë¼ìš°ë“œë„· ë‚´ë¶€ ë²„ì „ì •ë³´. C#ìª½ì—ì„œ ë„˜ì–´ì˜¤ëŠ” ê°’ìœ¼ë¡œ ì„¤ì •ëœë‹¤.
 	$globalVariables: {enableLog: false, setEnv: false, internalVersion: 0},
 	
-	// NetClientµéÀÌ ÀúÀåµÇ´Â °ø°£
+	// NetClientë“¤ì´ ì €ì¥ë˜ëŠ” ê³µê°„
 	$netClientInstances: [],
 	
-	// C#ÂÊÀÇ Äİ¹éµéÀÌ ÀúÀåµÇ´Â °ø°£
+	// C#ìª½ì˜ ì½œë°±ë“¤ì´ ì €ì¥ë˜ëŠ” ê³µê°„
 	$callbacks: {},
 	
 	SetOnJoinServerComplete: function(callback) {
@@ -113,7 +113,7 @@ var WebGL = {
 	},
 
 	$SetEnvironment: function() {
-		// ÇÑ ¹ø¸¸ ½ÇÇàÇÏ±â À§ÇØ
+		// í•œ ë²ˆë§Œ ì‹¤í–‰í•˜ê¸° ìœ„í•´
 		if(globalVariables.setEnv)
 			return;
 		else
@@ -985,8 +985,8 @@ var WebGL = {
 		return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 	},
 
-	// C#¿¡¼­ Á÷Á¢ÀûÀ¸·Î È£ÃâÇÏÁö ¾Ê´Â JS function¿¡ ´ëÇØ¼­´Â Unity Releaseºôµå½Ã stripÇØ¹ö¸°´Ù.
-	// ÇØ´ç »óÈ²À» ¹æÁöÇÏ±â À§ÇØ¼­ CreateJSClient¿¡¼­ dependency°¡ °É·ÁÀÖ´Ù°í ¾Ë·ÁÁà¾ß stripµÇÁö ¾Ê°í ½ÇÇà½Ã ¿À·ù°¡ ³ªÁö ¾Ê´Â´Ù.
+	// C#ì—ì„œ ì§ì ‘ì ìœ¼ë¡œ í˜¸ì¶œí•˜ì§€ ì•ŠëŠ” JS functionì— ëŒ€í•´ì„œëŠ” Unity Releaseë¹Œë“œì‹œ stripí•´ë²„ë¦°ë‹¤.
+	// í•´ë‹¹ ìƒí™©ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ì„œ CreateJSClientì—ì„œ dependencyê°€ ê±¸ë ¤ìˆë‹¤ê³  ì•Œë ¤ì¤˜ì•¼ stripë˜ì§€ ì•Šê³  ì‹¤í–‰ì‹œ ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•ŠëŠ”ë‹¤.
 	CreateJSClient__deps: 
 		['$netClientInstances',
 		'$callbacks',
@@ -1008,7 +1008,7 @@ var WebGL = {
 		'$ErrorInfo',
 		'$ByteArrayBase'],
 	
-	// ÀÌ ¾Æ·¡´Â C#¿¡¼­ È£ÃâÇÏ´Â JS functionµé
+	// ì´ ì•„ë˜ëŠ” C#ì—ì„œ í˜¸ì¶œí•˜ëŠ” JS functionë“¤
 	CreateJSClient: function(url, protocolVersion, userData, internalVersion) {
 		SetEnvironment();
 		var param = new NetConnectionParam();

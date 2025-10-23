@@ -1,17 +1,27 @@
-// UTF8·Î ÀúÀåÇÏÁö ¸¶¼¼¿ä. Unity Editor¿¡¼­ WebGL Build ¸í·É ½ÇÇà Áß¿¡ "cp-949 decode" ¾îÂ¼°í ³»ºÎ ¿¡·¯°¡ ¹ß»ýÇØ¹ö¸³´Ï´Ù. À¯´ÏÆ¼Ãø¿¡ ¿¡·¯ Çö»óÀ» Á¦º¸ÇØÁÖ¼¼¿ä.
+ï»¿// UTF8ë¡œ ì €ìž¥í•˜ì§€ ë§ˆì„¸ìš”. Unity Editorì—ì„œ WebGL Build ëª…ë ¹ ì‹¤í–‰ ì¤‘ì— "cp-949 decode" ì–´ì©Œê³  ë‚´ë¶€ ì—ëŸ¬ê°€ ë°œìƒí•´ë²„ë¦½ë‹ˆë‹¤. ìœ ë‹ˆí‹°ì¸¡ì— ì—ëŸ¬ í˜„ìƒì„ ì œë³´í•´ì£¼ì„¸ìš”.
 
 var WebGL = {
-	// enableLog¸¦ true·Î º¯°æÇÏ¸é JS´ÜÀÇ °³·«ÀûÀÎ ·Î±×¸¦ È®ÀÎ °¡´É. writeLog¸¦ »ç¿ëÇÏ¿© »ç¿ëÀÚÀÇ ·Î±×µµ Ãß°¡ °¡´É.
-	// setEnv´Â ÃÖÃÊ false, prototype Á¤ÀÇ ÈÄ true. functionÀ» ÀçÁ¤ÀÇ ÇÏÁö ¾Ê°í »ç¿ëÇÏ±â À§ÇØ prototype¿¡ Á¤ÀÇÇÑ °ÍÀÓ. »ç¿ëÀÚ´Â ÀÌ°ªÀ» ¼Õ´ëÁö ¸¶¼¼¿ä. ÆÛÆ÷¸Õ½º ÀúÇÏ·Î ÀÌ¾îÁý´Ï´Ù.
-	// internalVersionÀº ÇÁ¶ó¿ìµå³Ý ³»ºÎ ¹öÀüÁ¤º¸. C#ÂÊ¿¡¼­ ³Ñ¾î¿À´Â °ªÀ¸·Î ¼³Á¤µÈ´Ù.
+	// enableLogë¥¼ trueë¡œ ë³€ê²½í•˜ë©´ JSë‹¨ì˜ ê°œëžµì ì¸ ë¡œê·¸ë¥¼ í™•ì¸ ê°€ëŠ¥. writeLogë¥¼ ì‚¬ìš©í•˜ì—¬ ì‚¬ìš©ìžì˜ ë¡œê·¸ë„ ì¶”ê°€ ê°€ëŠ¥.
+	// setEnvëŠ” ìµœì´ˆ false, prototype ì •ì˜ í›„ true. functionì„ ìž¬ì •ì˜ í•˜ì§€ ì•Šê³  ì‚¬ìš©í•˜ê¸° ìœ„í•´ prototypeì— ì •ì˜í•œ ê²ƒìž„. ì‚¬ìš©ìžëŠ” ì´ê°’ì„ ì†ëŒ€ì§€ ë§ˆì„¸ìš”. í¼í¬ë¨¼ìŠ¤ ì €í•˜ë¡œ ì´ì–´ì§‘ë‹ˆë‹¤.
+	// internalVersionì€ í”„ë¼ìš°ë“œë„· ë‚´ë¶€ ë²„ì „ì •ë³´. C#ìª½ì—ì„œ ë„˜ì–´ì˜¤ëŠ” ê°’ìœ¼ë¡œ ì„¤ì •ëœë‹¤.
 	$globalVariables: {enableLog: false, setEnv: false, internalVersion: 0},
 	
-	// NetClientµéÀÌ ÀúÀåµÇ´Â °ø°£
+	// NetClientë“¤ì´ ì €ìž¥ë˜ëŠ” ê³µê°„
 	$netClientInstances: [],
 	
-	// C#ÂÊÀÇ ÄÝ¹éµéÀÌ ÀúÀåµÇ´Â °ø°£
+	// C#ìª½ì˜ ì½œë°±ë“¤ì´ ì €ìž¥ë˜ëŠ” ê³µê°„
 	$callbacks: {},
-	
+
+	// === Added for Unity 6 : allocate/ALLOC_STACK ëŒ€ì²´ìš© ë¬¸ìžì—´ í—¬í¼ ===
+	$allocCString: function (str) {
+		if (str == null) str = "";
+		var len = lengthBytesUTF8(str) + 1;
+		var ptr = stackAlloc(len);
+		stringToUTF8(str, ptr, len);
+		return ptr;
+	},
+	// ======================================================================
+
 	SetOnJoinServerComplete: function(callback) {
 		callbacks.onJoinServerComplete = callback;
 	},
@@ -113,7 +123,7 @@ var WebGL = {
 	},
 
 	$SetEnvironment: function() {
-		// ÇÑ ¹ø¸¸ ½ÇÇàÇÏ±â À§ÇØ
+		// í•œ ë²ˆë§Œ ì‹¤í–‰í•˜ê¸° ìœ„í•´
 		if(globalVariables.setEnv)
 			return;
 		else
@@ -254,11 +264,13 @@ var WebGL = {
 					disconnReason = "Abnormal Closure";
 				if(_this.disconnectByServer == true)
 				{
-					//Runtime.dynCall('viiii', callbacks.onLeaveServer,
-					//	[_this.instanceID, _this.errorType, _this.detailType, allocate(intArrayFromString(_this.reason + "[" + disconnReason + "]"), 'i8', ALLOC_STACK)]);
-						
-					{{{ makeDynCall('viiii', 'callbacks.onLeaveServer') }}}
-						(_this.instanceID, _this.errorType, _this.detailType, allocate(intArrayFromString(_this.reason + "[" + disconnReason + "]"), ALLOC_STACK));
+					// Unity 6: makeDynCall ì‚¬ìš©
+					{{{ makeDynCall('viiii','callbacks.onLeaveServer') }}}(
+						_this.instanceID,
+						_this.errorType,
+						_this.detailType,
+						allocCString(_this.reason + "[" + disconnReason + "]")
+					);
 				}
 			};
 			this.socketWrapper.socket.onerror = function (event) {
@@ -333,25 +345,23 @@ var WebGL = {
 					this.processMessage_Rmi(msg, remote);
 					break;
 				case MessageType.UserMessage:
-					//Runtime.dynCall('viii', callbacks.onUserMessage, [this.instanceID, remote, allocate(intArrayFromString(Uint8ArrayToBase64(msg.getArray().subarray(1))), 'i8', ALLOC_STACK)]);
-					{{{ makeDynCall('viii', 'callbacks.onUserMessage') }}} (this.instanceID, remote, allocate(intArrayFromString(Uint8ArrayToBase64(msg.getArray().subarray(1))), ALLOC_STACK));
+					{{{ makeDynCall('viii','callbacks.onUserMessage') }}}(
+						this.instanceID,
+						remote,
+						allocCString(Uint8ArrayToBase64(msg.getArray().subarray(1)))
+					);
 					break;
 				case MessageType.PolicyRequest:
 					break;
 			}
 		};
 		NetClient.prototype.processMessage_ConnectServerTimedout = function (msg) {
-			//Runtime.dynCall('viiii', callbacks.onJoinServerComplete,
-			//	[this.instanceID,
-			//	allocate(intArrayFromString(ErrorType.ConnectServerTimeout + "|" + 0), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString("Remote detected no receive."), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString(""), 'i8', ALLOC_STACK)]);
-				
-			{{{ makeDynCall('viiii', 'callbacks.onJoinServerComplete') }}}
-				(this.instanceID,
-				allocate(intArrayFromString(ErrorType.ConnectServerTimeout + "|" + 0), ALLOC_STACK),
-				allocate(intArrayFromString("Remote detected no receive."), ALLOC_STACK),
-				allocate(intArrayFromString(""), ALLOC_STACK));
+			{{{ makeDynCall('viiii','callbacks.onJoinServerComplete') }}}(
+				this.instanceID,
+				allocCString(ErrorType.ConnectServerTimeout + "|" + 0),
+				allocCString("Remote detected no receive."),
+				allocCString("")
+			);
 		};
 		NetClient.prototype.processMessage_NotifyStartupEnvironment = function (msg) {
 			var enableLog;
@@ -460,61 +470,38 @@ var WebGL = {
 			var localAddr = msg.readStringTillNull();
 			var localPort = msg.readUnsignedShort();
 			
-			//Runtime.dynCall('vii', callbacks.onHostIDIssued, [this.instanceID, this.localHostID]);
-			{{{ makeDynCall('vii', 'callbacks.onHostIDIssued') }}}(this.instanceID, this.localHostID);
-
+			{{{ makeDynCall('vii','callbacks.onHostIDIssued') }}}(this.instanceID, this.localHostID);
 			
-			//Runtime.dynCall('viiii', callbacks.onJoinServerComplete,
-			//	[this.instanceID, 
-			//	allocate(intArrayFromString(ErrorType.Ok + "|" + 0), 'i8', ALLOC_STACK), 
-			//	allocate(intArrayFromString(""), 'i8', ALLOC_STACK), 
-			//	allocate(intArrayFromString(Uint8ArrayToBase64(userData.getArray())), 'i8', ALLOC_STACK)]);
-				
-			{{{ makeDynCall('viiii', 'callbacks.onJoinServerComplete') }}}
-				(this.instanceID, 
-				allocate(intArrayFromString(ErrorType.Ok + "|" + 0), ALLOC_STACK), 
-				allocate(intArrayFromString(""), ALLOC_STACK), 
-				allocate(intArrayFromString(Uint8ArrayToBase64(userData.getArray())), ALLOC_STACK));
+			{{{ makeDynCall('viiii','callbacks.onJoinServerComplete') }}}(
+				this.instanceID, 
+				allocCString(ErrorType.Ok + "|" + 0), 
+				allocCString(""), 
+				allocCString(Uint8ArrayToBase64(userData.getArray()))
+			);
 		};
 		NetClient.prototype.processMessage_NotifyProtocolVersionMismatch = function (msg) {
-			//Runtime.dynCall('viiii', callbacks.onJoinServerComplete,
-			//	[this.instanceID,
-			//	allocate(intArrayFromString(ErrorType.ProtocolVersionMismatch + "|" + 0), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString("NPVM1"), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString(""), 'i8', ALLOC_STACK)]);
-				
-			{{{ makeDynCall('viiii', 'callbacks.onJoinServerComplete') }}}
-				(this.instanceID,
-				allocate(intArrayFromString(ErrorType.ProtocolVersionMismatch + "|" + 0), ALLOC_STACK),
-				allocate(intArrayFromString("NPVM1"), ALLOC_STACK),
-				allocate(intArrayFromString(""), ALLOC_STACK));
-
+			{{{ makeDynCall('viiii','callbacks.onJoinServerComplete') }}}(
+				this.instanceID,
+				allocCString(ErrorType.ProtocolVersionMismatch + "|" + 0),
+				allocCString("NPVM1"),
+				allocCString("")
+			);
 		};
 		NetClient.prototype.processMessage_NotifyLicenseMismatch = function (msg) {
-			//Runtime.dynCall('viiii', callbacks.onJoinServerComplete,
-			//	[this.instanceID,
-			//	allocate(intArrayFromString(ErrorType.InvalidLicense + "|" + 0), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString("NLM1"), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString(""), 'i8', ALLOC_STACK)]);
-				
-			{{{ makeDynCall('viiii', 'callbacks.onJoinServerComplete') }}}
-				(this.instanceID,
-				allocate(intArrayFromString(ErrorType.InvalidLicense + "|" + 0), ALLOC_STACK),
-				allocate(intArrayFromString("NLM1"), ALLOC_STACK),
-				allocate(intArrayFromString(""), ALLOC_STACK));
+			{{{ makeDynCall('viiii','callbacks.onJoinServerComplete') }}}(
+				this.instanceID,
+				allocCString(ErrorType.InvalidLicense + "|" + 0),
+				allocCString("NLM1"),
+				allocCString("")
+			);
 		};
 		NetClient.prototype.processMessage_NotifyServerDeniedConnection = function (msg) {
-			//Runtime.dynCall('viiii', callbacks.onJoinServerComplete,
-			//	[this.instanceID,
-			//	allocate(intArrayFromString(ErrorType.NotifyServerDeniedConnection + "|" + 0), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString("NPDC"), 'i8', ALLOC_STACK),
-			//	allocate(intArrayFromString(""), 'i8', ALLOC_STACK)]);
-				
-			{{{ makeDynCall('viiii', 'callbacks.onJoinServerComplete') }}}
-				(this.instanceID,
-				allocate(intArrayFromString(ErrorType.NotifyServerDeniedConnection + "|" + 0), ALLOC_STACK),
-				allocate(intArrayFromString("NPDC"), ALLOC_STACK),
-				allocate(intArrayFromString(""), ALLOC_STACK));
+			{{{ makeDynCall('viiii','callbacks.onJoinServerComplete') }}}(
+				this.instanceID,
+				allocCString(ErrorType.NotifyServerDeniedConnection + "|" + 0),
+				allocCString("NPDC"),
+				allocCString("")
+			);
 		};
 		NetClient.prototype.processMessage_ReliableRelay2 = function (msg) {
 			var senderHostID = msg.readInt();
@@ -531,8 +518,11 @@ var WebGL = {
 		};
 		NetClient.prototype.processMessage_Rmi = function (msg, remote) {
 			if(this.netS2CStub.ProcessReceivedMessage(msg, remote) == false) {
-				//Runtime.dynCall('viii', callbacks.onRmi, [this.instanceID, remote, allocate(intArrayFromString(Uint8ArrayToBase64(msg.getArray().subarray(1))), 'i8', ALLOC_STACK)]);
-				{{{ makeDynCall('viii', 'callbacks.onRmi') }}} (this.instanceID, remote, allocate(intArrayFromString(Uint8ArrayToBase64(msg.getArray().subarray(1))), ALLOC_STACK));
+				{{{ makeDynCall('viii','callbacks.onRmi') }}}(
+					this.instanceID,
+					remote,
+					allocCString(Uint8ArrayToBase64(msg.getArray().subarray(1)))
+				);
 			}
 		};
 
@@ -616,8 +606,7 @@ var WebGL = {
 				case ProudS2C.Rmi_ReliablePong:
 					this.client.serverTcpLastPingMs = msg.readInt();
 					var messageID = msg.readInt();
-					//Runtime.dynCall('vi', callbacks.onSynchronizeServerTime, [this.client.instanceID]);
-					{{{ makeDynCall('vi', 'callbacks.onSynchronizeServerTime') }}}(this.client.instanceID);
+					{{{ makeDynCall('vi','callbacks.onSynchronizeServerTime') }}}(this.client.instanceID);
 					break;
 				case ProudS2C.Rmi_EnableLog:
 					globalVariables.enableLog = true;
@@ -1024,8 +1013,8 @@ var WebGL = {
 		return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 	},
 
-	// C#¿¡¼­ Á÷Á¢ÀûÀ¸·Î È£ÃâÇÏÁö ¾Ê´Â JS function¿¡ ´ëÇØ¼­´Â Unity Releaseºôµå½Ã stripÇØ¹ö¸°´Ù.
-	// ÇØ´ç »óÈ²À» ¹æÁöÇÏ±â À§ÇØ¼­ CreateJSClient¿¡¼­ dependency°¡ °É·ÁÀÖ´Ù°í ¾Ë·ÁÁà¾ß stripµÇÁö ¾Ê°í ½ÇÇà½Ã ¿À·ù°¡ ³ªÁö ¾Ê´Â´Ù.
+	// C#ì—ì„œ ì§ì ‘ì ìœ¼ë¡œ í˜¸ì¶œí•˜ì§€ ì•ŠëŠ” JS functionì— ëŒ€í•´ì„œëŠ” Unity Releaseë¹Œë“œì‹œ stripí•´ë²„ë¦°ë‹¤.
+	// í•´ë‹¹ ìƒí™©ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ì„œ CreateJSClientì—ì„œ dependencyê°€ ê±¸ë ¤ìžˆë‹¤ê³  ì•Œë ¤ì¤˜ì•¼ stripë˜ì§€ ì•Šê³  ì‹¤í–‰ì‹œ ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•ŠëŠ”ë‹¤.
 	CreateJSClient__deps: 
 		['$netClientInstances',
 		'$callbacks',
@@ -1045,12 +1034,14 @@ var WebGL = {
 		'$NetC2SProxy',
 		'$NetS2CStub',
 		'$ErrorInfo',
-		'$ByteArrayBase'],
-	
-	// ÀÌ ¾Æ·¡´Â C#¿¡¼­ È£ÃâÇÏ´Â JS functionµé
+		'$ByteArrayBase',
+		'$allocCString'],   // Unity 6ì—ì„œë„ ê³µí†µ ì‚¬ìš©
+
+	// ì´ ì•„ëž˜ëŠ” C#ì—ì„œ í˜¸ì¶œí•˜ëŠ” JS functionë“¤
 	CreateJSClient: function(url, protocolVersion, userData, internalVersion) {
 		SetEnvironment();
 		var param = new NetConnectionParam();
+		// Unity 6: Pointer_stringify -> UTF8ToString
 		param.serverUrl = UTF8ToString(url);
 		
 		var guidArr = new ByteArrayBase();
@@ -1060,7 +1051,7 @@ var WebGL = {
 		param.protocolVersion.setValue(guidArr.readUnsignedInt(), guidArr.readUnsignedShort(), guidArr.readUnsignedShort(), [guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte(), guidArr.readUnsignedByte()]);
 		
 		param.userData = new ByteArrayBase();
-		param.userData.setArray(userData == "" ? new Uint8Array(new ArrayBuffer(0)) : base64ToUint8Array(UTF8ToString(userData)));
+		param.userData.setArray(UTF8ToString(userData) == "" ? new Uint8Array(new ArrayBuffer(0)) : base64ToUint8Array(UTF8ToString(userData)));
 		
 		globalVariables.internalVersion = internalVersion;
 		
@@ -1077,6 +1068,7 @@ var WebGL = {
 			hostIDArr.push(HEAP32[(remotes>>2) + i]);
 		
 		var payload = new ByteArrayBase();
+		// Unity 6
 		payload.setArray(base64ToUint8Array(UTF8ToString(base64encoded)));
 		
 		var rmiContext = new RmiContext();
@@ -1101,6 +1093,7 @@ var WebGL = {
 			hostIDArr.push(HEAP32[(remotes>>2) + i]);
 		
 		var payload = new ByteArrayBase();
+		// Unity 6
 		payload.setArray(base64ToUint8Array(UTF8ToString(base64encoded)));
 
 		var rmiContext = new RmiContext();
